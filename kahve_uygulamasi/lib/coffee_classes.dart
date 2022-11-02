@@ -44,4 +44,5 @@ class CoffeeUtility{
   late CoffeeWithSuggestion cappucinoS=CoffeeWithSuggestion(kahve: cappucino, oneriler: [latte,macchiato,flatWhite]);
   late CoffeeWithSuggestion macchiatoS=CoffeeWithSuggestion(kahve: macchiato, oneriler: [cappucino,latte,espresso]);
   late CoffeeWithSuggestion flatWhiteS=CoffeeWithSuggestion(kahve: flatWhite, oneriler: [cappucino,macchiato,espresso]);
+  late CoffeeWithSuggestion espressoS=CoffeeWithSuggestion(kahve: espresso, oneriler: [iceAmericano,cappucino,macchiato,flatWhite]);
 }
