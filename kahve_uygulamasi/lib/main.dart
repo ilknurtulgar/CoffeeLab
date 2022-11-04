@@ -19,7 +19,7 @@ class KahveUygulamasi extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          body: Page3View(onerileriyleKahve: onerileriyleKahve),
+          body: SplashScreen(),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
 
 class CustomText extends StatefulWidget {
   const CustomText({
@@ -13,6 +14,7 @@ class CustomText extends StatefulWidget {
     required this.text1,
     this.text2,
     this.onTap,
+    this.borderColor,
   }) : super(key: key);
   final String text1;
   final String? text2;
@@ -25,6 +27,7 @@ class CustomText extends StatefulWidget {
   final BorderRadius borderRadius;
   final TextAlign textAlign;
   final Function()? onTap;
+  final Color? borderColor;
 
   @override
   State<CustomText> createState() => _CustomTextState();
@@ -48,9 +51,10 @@ class _CustomTextState extends State<CustomText> {
           width: widget.width,
           height: widget.height,
           decoration: BoxDecoration(
-            borderRadius: widget.borderRadius,
-            color: widget.color,
-          ),
+              borderRadius: widget.borderRadius,
+              color: widget.color,
+              border:
+                  Border.all(color: widget.borderColor ?? AppColor.koromiko)),
         ),
       ),
     );
