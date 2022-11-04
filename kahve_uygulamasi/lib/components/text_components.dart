@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../Utilitys/base_utility.dart';
+import '../core/base/util/base_utility.dart';
 
 Container buildTextSuggestion(String coffeName) {
   return Container(

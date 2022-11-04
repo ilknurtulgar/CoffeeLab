@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/core/components/text_components.dart';
-import '../core/Utilitys/base_utility.dart';
+import '../core/base/util/base_utility.dart';
 import '../core/components/image_component.dart';
 
 class Page3View extends StatelessWidget {
@@ -38,7 +38,7 @@ class Page3View extends StatelessWidget {
                 Expanded(
                   flex: 7,
                   child: Container(
-                    padding: AppMargin.listviewPadding,
+                    padding: PaddingUtility.listviewPadding,
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) => //degiistirilecek

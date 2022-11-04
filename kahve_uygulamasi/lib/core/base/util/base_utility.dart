@@ -4,7 +4,7 @@ class AppColor {
   static Color Koromiko = Color(0xFFFFB067);
   static Color White = Color(0xFFFFFFFF);
   static Color Black = Color(0xFF000000);
-  static Color WildSand = Color(0xFFF5F5F5);
+  static Color WildSand /*backgroundcolor*/ = Color(0xFFF5F5F5);
   static Color ApricotPeach = Color(0xFFFBDABC);
   static Color Tacao = Color(0xFFEDBD90);
   static Color MineShaft = Color(0xFF333333);
@@ -21,15 +21,38 @@ class AppComponentSizes {
 
 class AppMargin {
   static EdgeInsets columnMargin = EdgeInsets.symmetric(vertical: 10);
-  static EdgeInsets listviewPadding = EdgeInsets.symmetric(horizontal: 20);
   static EdgeInsets containersMargin =
       EdgeInsets.symmetric(vertical: 7, horizontal: 20);
 
   static EdgeInsets suggestionsMargin = EdgeInsets.only(right: 20, top: 10);
 }
 
+class PaddingUtility {
+  static EdgeInsets listviewPadding = EdgeInsets.symmetric(horizontal: 20);
+  static const EdgeInsets paddingOnly = EdgeInsets.only(left: 191, top: 70);
+  static const EdgeInsets paddingonlyTab = EdgeInsets.only(top: 350, left: 200);
+  static const EdgeInsets paddingImage = EdgeInsets.only(left: 19, right: 19);
+}
+
+class AlignUtility {
+  static const TextAlign textAlign = TextAlign.center;
+}
+
+TextStyle barTextStyle() =>
+    TextStyle(fontSize: 20, fontWeight: FontWeight.w600);
+TextStyle topTextStyle() =>
+    TextStyle(fontSize: 16, fontWeight: FontWeight.w600, fontFamily: "Poppins");
+
+TextStyle buttonTextStyle() =>
+    TextStyle(fontSize: 12, fontWeight: FontWeight.w600, fontFamily: "Poppins");
+
 class AppRadius {
   static BorderRadius componentRadius = BorderRadius.circular(30);
+
+  static const BorderRadius borderRadius =
+      BorderRadius.all(Radius.circular(12));
+  static const BorderRadius bordertopRadius =
+      BorderRadius.all(Radius.circular(38));
 }
 
 class CoffeDefinitions {
@@ -56,4 +79,24 @@ class CoffeDefinitions {
       'Kavrulmuş ve ince çekilmiş kahve tozunun içinden 90 derece sıcaklıkta suyun çok kısa bir sürede yüksek basınçla geçirilmesi ile hazırlanan kahve çeşidi.';
   static String IceAmericano =
       'Espresso soğuk su ve buz ile hazırlanan kahve çeşidi.';
+}
+
+class MainPositioned {
+  static double left = 64;
+  static double topx = 61;
+  static double right = 60;
+  static double top2x = 150;
+}
+
+class TextStyleView {
+  static String fontFamily = "Amiri";
+  static double fontSize = 50;
+  static FontWeight fontWeight = FontWeight.w700;
+}
+
+class CoffeeeAssistantPositioned {
+  static double left = 57;
+  static double right = 58;
+  static double bottomx = 90;
+  static double bottom2x = 180;
 }
