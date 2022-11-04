@@ -13,6 +13,7 @@ class AppColor {
 
 class AppComponentSizes {
   static double big_Width = 375; //kahve aciklamasi ve kahve resmi
+  static double text_Width = 300;
   static double scroll_Width = 220; //son sayfa bottom scroll componentler
   static double scroll_height = 180;
   static double coffe_exp_height = 150; //kahve aciklamasi kismi
@@ -28,6 +29,8 @@ class AppMargin {
 }
 
 class PaddingUtility {
+  static EdgeInsets textPading = EdgeInsets.symmetric(horizontal: 18);
+  static EdgeInsets coffeNamePading = EdgeInsets.symmetric(vertical: 18);
   static EdgeInsets listviewPadding = EdgeInsets.symmetric(horizontal: 20);
   static const EdgeInsets paddingOnly = EdgeInsets.only(left: 191, top: 70);
   static const EdgeInsets paddingonlyTab = EdgeInsets.only(top: 350, left: 200);
@@ -36,6 +39,7 @@ class PaddingUtility {
 
 class AlignUtility {
   static const TextAlign textAlign = TextAlign.center;
+  static TextAlign start = TextAlign.start;
 }
 
 TextStyle barTextStyle() =>
@@ -64,8 +68,12 @@ class MainPositioned {
 
 class TextStyleView {
   static String fontFamily = "Amiri";
+  static String fontFamilyPoppins = "Poppins";
+  static double fontSizePage3 = 32;
+  static double fontSizeSuggestion = 18;
   static double fontSize = 50;
   static FontWeight fontWeight = FontWeight.w700;
+  static FontWeight fontWeightPage3 = FontWeight.w500;
 }
 
 class CoffeeeAssistantPositioned {

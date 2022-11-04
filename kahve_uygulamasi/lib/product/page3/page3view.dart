@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'package:kahve_uygulamasi/product/page3/custom_text.dart';
+import 'package:kahve_uygulamasi/product/page3/Texts/custom_text.dart';
 
 import 'package:kahve_uygulamasi/model/coffee_classes.dart';
 
 import '../../core/base/util/base_utility.dart';
 
+import 'Texts/text_container.dart';
 import 'custom_image.dart';
+import 'suggestion.dart';
 
 class Page3View extends StatelessWidget {
   const Page3View({super.key, required this.onerileriyleKahve});
@@ -35,7 +37,7 @@ class Page3View extends StatelessWidget {
               children: [
                 Expanded(
                   flex: 6,
-                  child: txttemporary(tmptxt, tmpdef),
+                  child: TextContainer(tmptxt, tmpdef),
                 ),
                 Expanded(
                   flex: 14,
@@ -59,60 +61,6 @@ class Page3View extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-
-//tamamen gecici
-  Container txttemporary(String txt1, String txt2) {
-    return Container(
-      width: AppComponentSizes.big_Width,
-      //height: AppComponentSizes.coffe_exp_height,
-      margin: AppMargin.containersMargin,
-      decoration: BoxDecoration(
-          borderRadius: AppRadius.componentRadius, color: AppColor.tacao),
-      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Text(
-          txt1,
-          style: TextStyle(
-              color: AppColor.black, fontSize: 25, fontWeight: FontWeight.w700),
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Container(
-          padding: AppMargin.containersMargin,
-          child: Text(
-            txt2,
-            style: TextStyle(
-                color: AppColor.black,
-                fontSize: 18,
-                fontWeight: FontWeight.w700),
-          ),
-        )
-      ]),
-    );
-  }
-
-  Widget Suggestion(String imagePath, String coffeName) {
-    return Column(
-      children: [
-        Expanded(
-          flex: 5,
-          child: Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: AppRadius.componentRadius,
-            ),
-            margin: AppMargin.suggestionsMargin,
-            elevation: 10,
-            child: CustomImage(
-                imagePath, EdgeInsets.all(0), AppComponentSizes.scroll_Width),
-          ),
-        ),
-        Expanded(
-          flex: 1,
-          child: CustomTextSuggestion(coffeName),
-        )
-      ],
     );
   }
 }

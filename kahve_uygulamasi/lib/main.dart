@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
+import 'package:kahve_uygulamasi/product/page3/page3view.dart';
 import 'package:kahve_uygulamasi/product/splash_screen/splash_screen.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class KahveUygulamasi extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          body: SplashScreen(),
+          body: Page3View(onerileriyleKahve: onerileriyleKahve),
         ),
       ),
     );
