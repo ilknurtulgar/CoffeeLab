@@ -1,152 +1,55 @@
 class Coffee {
-  late List<bool> ingredients = [
-    sut,
-    buz,
-    seker,
-    krema,
-    sutluCikolata,
-    beyazCikolata,
-    karamel
-  ];
-  bool sut;
-  bool buz;
-  bool seker;
-  bool krema;
-  bool sutluCikolata;
-  bool beyazCikolata;
-  bool karamel;
+  bool? sut;
+  bool? buz;
+  bool? seker;
+  bool? krema;
+  bool? sutluCikolata;
+  bool? beyazCikolata;
+  bool? karamel;
   Coffee({
-    required this.sut,
-    required this.buz,
-    required this.seker,
-    required this.krema,
-    required this.sutluCikolata,
-    required this.beyazCikolata,
-    required this.karamel,
+    this.sut,
+    this.buz,
+    this.seker,
+    this.krema,
+    this.sutluCikolata,
+    this.beyazCikolata,
+    this.karamel,
   });
 }
 
 class CoffeeWithSuggestion {
-  Coffee kahve;
-  List<Coffee> oneriler = [];
-  CoffeeWithSuggestion({required this.kahve, required this.oneriler});
+  Coffee coffee;
+  String coffeeName;
+  List<Coffee> suggestions = [];
+  CoffeeWithSuggestion({required this.coffee, required this.suggestions,required this.coffeeName});
 }
-
-class CoffeeUtility {
-  Coffee caramelMacchiato = Coffee(
-      sut: true,
-      buz: false,
-      seker: false,
-      krema: false,
-      sutluCikolata: false,
-      beyazCikolata: false,
-      karamel: true);
-  Coffee whiteChocolateMocha = Coffee(
-      sut: true,
-      buz: false,
-      seker: true,
-      krema: false,
-      sutluCikolata: false,
-      beyazCikolata: true,
-      karamel: false);
-  Coffee mocha = Coffee(
-      sut: true,
-      buz: false,
-      seker: true,
-      krema: false,
-      sutluCikolata: true,
-      beyazCikolata: false,
-      karamel: false);
-  Coffee conPanna = Coffee(
-      sut: false,
-      buz: false,
-      seker: false,
-      krema: true,
-      sutluCikolata: false,
-      beyazCikolata: false,
-      karamel: false);
-  Coffee frappe = Coffee(
-      sut: true,
-      buz: true,
-      seker: true,
-      krema: false,
-      sutluCikolata: false,
-      beyazCikolata: false,
-      karamel: false);
-  Coffee iceAmericano = Coffee(
-      sut: false,
-      buz: true,
-      seker: false,
-      krema: false,
-      sutluCikolata: false,
-      beyazCikolata: false,
-      karamel: false);
-  Coffee latte = Coffee(
-      sut: true,
-      buz: false,
-      seker: true,
-      krema: false,
-      sutluCikolata: false,
-      beyazCikolata: false,
-      karamel: false);
-  Coffee cappucino = Coffee(
-      sut: true,
-      buz: false,
-      seker: false,
-      krema: false,
-      sutluCikolata: false,
-      beyazCikolata: false,
-      karamel: false);
-  Coffee macchiato = Coffee(
-      sut: true,
-      buz: false,
-      seker: false,
-      krema: false,
-      sutluCikolata: false,
-      beyazCikolata: false,
-      karamel: false);
-  Coffee flatWhite = Coffee(
-      sut: true,
-      buz: false,
-      seker: false,
-      krema: false,
-      sutluCikolata: false,
-      beyazCikolata: false,
-      karamel: false);
-  Coffee espresso = Coffee(
-      sut: false,
-      buz: false,
-      seker: false,
-      krema: false,
-      sutluCikolata: false,
-      beyazCikolata: false,
-      karamel: false);
-  late CoffeeWithSuggestion caramelMacchinatoS = CoffeeWithSuggestion(
-      kahve: caramelMacchiato,
-      oneriler: [frappe, mocha, whiteChocolateMocha, conPanna]);
-  late CoffeeWithSuggestion whiteChocolateMochaS = CoffeeWithSuggestion(
-      kahve: whiteChocolateMocha, oneriler: [mocha, caramelMacchiato, latte]);
-  late CoffeeWithSuggestion mochaS = CoffeeWithSuggestion(
-      kahve: mocha, oneriler: [whiteChocolateMocha, caramelMacchiato, latte]);
-  late CoffeeWithSuggestion conPannaS = CoffeeWithSuggestion(
-      kahve: conPanna, oneriler: [latte, cappucino, macchiato, flatWhite]);
-  late CoffeeWithSuggestion frappeS = CoffeeWithSuggestion(
-      kahve: frappe,
-      oneriler: [mocha, whiteChocolateMocha, frappe, caramelMacchiato]);
-  late CoffeeWithSuggestion iceAmericanoS =
-      CoffeeWithSuggestion(kahve: iceAmericano, oneriler: [espresso, frappe]);
-  late CoffeeWithSuggestion latteS = CoffeeWithSuggestion(
-      kahve: latte, oneriler: [mocha, whiteChocolateMocha, caramelMacchiato]);
-  late CoffeeWithSuggestion cappucinoS = CoffeeWithSuggestion(
-      kahve: cappucino, oneriler: [latte, macchiato, flatWhite]);
-  late CoffeeWithSuggestion macchiatoS = CoffeeWithSuggestion(
-      kahve: macchiato, oneriler: [cappucino, latte, espresso]);
-  late CoffeeWithSuggestion flatWhiteS = CoffeeWithSuggestion(
-      kahve: flatWhite, oneriler: [cappucino, macchiato, espresso]);
-  late CoffeeWithSuggestion espressoS = CoffeeWithSuggestion(
-      kahve: espresso,
-      oneriler: [iceAmericano, cappucino, macchiato, flatWhite]);
-}
+class CoffeeUtility{
+  Coffee caramelMacchiato = Coffee(sut: true,buz: false,seker: false,krema: false,sutluCikolata: false,beyazCikolata: false,karamel: true, );
+  Coffee whiteChocolateMocha = Coffee(sut: true,buz: false,seker: true,krema: false,sutluCikolata: false,beyazCikolata: true,karamel: false);
+  Coffee mocha = Coffee(sut: true,buz: false,seker: true,krema: false,sutluCikolata: true,beyazCikolata: false,karamel: false); 
+  Coffee conPanna = Coffee(sut: false,buz: false,seker: false,krema: true,sutluCikolata: false,beyazCikolata: false,karamel: false);
+  Coffee frappe = Coffee(sut: true,buz: true,seker: true,krema: false,sutluCikolata: false,beyazCikolata: false,karamel: false);
+  Coffee iceAmericano = Coffee(sut: false,buz: true,seker: false,krema: false,sutluCikolata: false,beyazCikolata: false,karamel: false); 
+  Coffee sicakLatte = Coffee(sut: true,buz: false,seker: true,krema: false,sutluCikolata: false,beyazCikolata: false,karamel: false); //
+  Coffee sogukLatte = Coffee(sut: true,buz: true,seker: false,krema: false,sutluCikolata: false,beyazCikolata: false,karamel: false);
+  Coffee cappucino = Coffee(sut: true,buz: false,seker: false,krema: false,sutluCikolata: false,beyazCikolata: false,karamel: false); //
+  Coffee macchiato = Coffee(sut: true,buz: false,seker: false,krema: false,sutluCikolata: false,beyazCikolata: false,karamel: false); //
+  Coffee flatWhite = Coffee(sut: true,buz: false,seker: false,krema: false,sutluCikolata: false,beyazCikolata: false,karamel: false); //
+  Coffee turkKahvesi = Coffee(sut: false,buz: false,seker: true,krema: false,sutluCikolata: false,beyazCikolata: false,karamel: false);
+  Coffee espresso = Coffee(sut: false,buz: false,seker: false,krema: false,sutluCikolata: false,beyazCikolata: false,karamel: false); //
+  late CoffeeWithSuggestion caramelMacchiatoS = CoffeeWithSuggestion(coffee: caramelMacchiato,suggestions: [frappe, mocha, whiteChocolateMocha, conPanna],coffeeName: 'cmacchiato');
+  late CoffeeWithSuggestion whiteChocolateMochaS = CoffeeWithSuggestion(coffee: whiteChocolateMocha,suggestions: [mocha, caramelMacchiato, sicakLatte],coffeeName: 'white cho mocha');
+  late CoffeeWithSuggestion mochaS = CoffeeWithSuggestion(coffee: mocha,suggestions: [whiteChocolateMocha, caramelMacchiato, sicakLatte],coffeeName: 'mocha');
+  late CoffeeWithSuggestion conPannaS = CoffeeWithSuggestion(coffee: conPanna,suggestions: [sicakLatte, cappucino, macchiato, flatWhite],coffeeName: 'con panna');
+  late CoffeeWithSuggestion frappeS = CoffeeWithSuggestion(coffee: frappe,suggestions: [sogukLatte,mocha,whiteChocolateMocha,frappe,caramelMacchiato],coffeeName: 'frappe');
+  late CoffeeWithSuggestion iceAmericanoS = CoffeeWithSuggestion(coffee: iceAmericano,suggestions: [espresso, frappe, sogukLatte],coffeeName: 'ice americano');
+  late CoffeeWithSuggestion sicakLatteS = CoffeeWithSuggestion(coffee: sicakLatte,suggestions: [mocha, whiteChocolateMocha, caramelMacchiato],coffeeName: 'sicak latte');
+  late CoffeeWithSuggestion sogukLatteS = CoffeeWithSuggestion(coffee: sicakLatte,suggestions: [mocha, whiteChocolateMocha, caramelMacchiato],coffeeName: 'soguk latte');
+  late CoffeeWithSuggestion cappucinoS = CoffeeWithSuggestion(coffee: cappucino,suggestions: [sicakLatte, macchiato, flatWhite],coffeeName: 'capp');
+  late CoffeeWithSuggestion macchiatoS = CoffeeWithSuggestion(coffee: macchiato,suggestions: [cappucino, sicakLatte, espresso],coffeeName: 'macc');
+  late CoffeeWithSuggestion flatWhiteS = CoffeeWithSuggestion(coffee: flatWhite,suggestions: [cappucino, macchiato, espresso],coffeeName: 'flat white');
+  late CoffeeWithSuggestion turkKahvesiS = CoffeeWithSuggestion(coffee: turkKahvesi,suggestions: [iceAmericano, espresso],coffeeName: 'türk kahvesi');
+  late CoffeeWithSuggestion espressoS = CoffeeWithSuggestion(coffee: espresso,suggestions: [iceAmericano, cappucino, macchiato, flatWhite],coffeeName: 'espresso');}
 
 class CoffeDefinitions {
   static String americano =

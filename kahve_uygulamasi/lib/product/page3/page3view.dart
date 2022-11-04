@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+
 import 'package:kahve_uygulamasi/product/page3/custom_text.dart';
+
+import 'package:kahve_uygulamasi/model/coffee_classes.dart';
 
 import '../../core/base/util/base_utility.dart';
 
 import 'custom_image.dart';
 
 class Page3View extends StatelessWidget {
-  const Page3View({super.key});
+  const Page3View({super.key, required this.onerileriyleKahve});
+  final CoffeeWithSuggestion onerileriyleKahve;
 
   //TAMAMEN GECICI VERI ALINDIGINDA DEGISECEK
   final String tmpImageSrc =
