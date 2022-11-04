@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../../../core/base/util/base_utility.dart';
 
-Expanded containerImage() {
+Expanded containerImage(index) {
   return Expanded(
     child: Container(
       padding: PaddingUtility.paddingImage,
       height: 100,
       width: 114.25,
       child: Image.asset(
-        "assets/flatwhite.jpg",
+        imageUi[index],
       ),
     ),
   );
@@ -30,3 +30,10 @@ class ColumnImage extends StatelessWidget {
     );
   }
 }
+
+List imageUi = [
+  "assets/images/latte.jpeg",
+  "assets/images/cappucino.jpeg",
+  "assets/images/espresso.jpeg",
+  "assets/images/conPanna.jpeg"
+];
