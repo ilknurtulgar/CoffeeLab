@@ -10,7 +10,7 @@ import 'custom_image.dart';
 
 class Page3View extends StatelessWidget {
   const Page3View({super.key, required this.onerileriyleKahve});
-  final CoffeeWithSuggestion onerileriyleKahve;
+  final CoffeeViewModel onerileriyleKahve;
 
   //TAMAMEN GECICI VERI ALINDIGINDA DEGISECEK
   final String tmpImageSrc =

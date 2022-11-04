@@ -25,13 +25,13 @@ class _IngredientSelectionState extends State<IngredientSelection> {
     (bool upIngredient) {setState(() {kahve.beyazCikolata = upIngredient;});},
     (bool upIngredient) {setState(() {kahve.karamel = upIngredient;});},
   ];
-  void sendCoffee(CoffeeWithSuggestion onerileriyleKahve) {
+  void sendCoffee(CoffeeViewModel onerileriyleKahve) {
     Navigator.push(context,MaterialPageRoute(builder: (context) => Page3View(onerileriyleKahve: onerileriyleKahve),)); 
   }
   void determineCoffeeKind(Coffee kahve) {
     int randomNumber = 0;
     CoffeeUtility cu_in_function = CoffeeUtility();
-    List<CoffeeWithSuggestion> sutluSekersiz = [cu_in_function.macchiatoS,cu_in_function.cappucinoS,cu_in_function.flatWhiteS];
+    List<CoffeeViewModel> sutluSekersiz = [cu_in_function.macchiatoS,cu_in_function.cappucinoS,cu_in_function.flatWhiteS];
     if (kahve.sutluCikolata == true) {
       sendCoffee(coffee_utility.mochaS); //Mocha
     } else if (kahve.beyazCikolata == true) {
