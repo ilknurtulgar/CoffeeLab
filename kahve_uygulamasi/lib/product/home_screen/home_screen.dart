@@ -17,16 +17,35 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late ButtonBox buttonBox=ButtonBox(borderRadius: BorderRadius.circular(15), text: 'Kahveyi Yolla', color: Colors.brown, height: 50, padding: EdgeInsets.zero , textAlign:  TextAlign.center, textStyle: TextStyle(fontSize: 16), width: 200,ontap: (() => selectionControl(kahve)) );
+  late ButtonBox buttonBox = ButtonBox(
+      borderRadius: BorderRadius.circular(15),
+      text: 'Kahveyi Yolla',
+      color: Colors.brown,
+      height: 50,
+      padding: EdgeInsets.zero,
+      textAlign: TextAlign.center,
+      textStyle: TextStyle(fontSize: 16),
+      width: 200,
+      ontap: (() => selectionControl(kahve)));
   Coffee kahve = Coffee();
   CoffeeUtility coffee_utility = CoffeeUtility();
   void sendCoffee(CoffeeViewModel onerileriyleKahvee) {
-    Navigator.push(context,MaterialPageRoute(builder: (context) => Page3View(onerileriyleKahve: onerileriyleKahvee),)); 
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              Page3View(onerileriyleKahve: onerileriyleKahvee),
+        ));
   }
+
   void determineCoffeeKind(Coffee kahve) {
     int randomNumber = 0;
     CoffeeUtility cu_in_function = CoffeeUtility();
-    List<CoffeeViewModel> sutluSekersiz = [cu_in_function.macchiatoS,cu_in_function.cappucinoS,cu_in_function.flatWhiteS];
+    List<CoffeeViewModel> sutluSekersiz = [
+      cu_in_function.macchiatoS,
+      cu_in_function.cappucinoS,
+      cu_in_function.flatWhiteS
+    ];
     if (kahve.sutluCikolata == true) {
       sendCoffee(coffee_utility.mochaS); //Mocha
     } else if (kahve.beyazCikolata == true) {
@@ -37,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
       sendCoffee(coffee_utility.caramelMacchiatoS); //caramel macchiato
     } else if (kahve.buz == true) {
       if (kahve.seker == true) {
-        sendCoffee(coffee_utility.frappeS);//frappe
+        sendCoffee(coffee_utility.frappeS); //frappe
       } else {
         if (kahve.sut == true) {
           sendCoffee(coffee_utility.sogukLatteS);
@@ -54,13 +73,22 @@ class _HomeScreenState extends State<HomeScreen> {
         sendCoffee(sutluSekersiz[randomNumber]);
       }
     } else if (kahve.seker == true) {
-      sendCoffee(coffee_utility.turkKahvesiS);//türk kahvesi
+      sendCoffee(coffee_utility.turkKahvesiS); //türk kahvesi
     } else {
       sendCoffee(coffee_utility.espressoS); //espresso
     }
   }
+
   void selectionControl(Coffee kahve) {
-    late List<bool?> ingredients_in_function_coffee = [kahve.sut,kahve.buz,kahve.seker,kahve.krema,kahve.sutluCikolata,kahve.beyazCikolata,kahve.karamel];
+    late List<bool?> ingredients_in_function_coffee = [
+      kahve.sut,
+      kahve.buz,
+      kahve.seker,
+      kahve.krema,
+      kahve.sutluCikolata,
+      kahve.beyazCikolata,
+      kahve.karamel
+    ];
     int nullMalzemeSayisi = 0;
     int i = 0;
     for (i = 0; i < ingredients_in_function_coffee.length; i++) {
@@ -88,6 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
       );
     }
   }
+
   @override
   Widget build(BuildContext context) {
     /*SystemChrome.setSystemUIOverlayStyle(
@@ -100,11 +129,12 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               ColumnImage(
                 child: ListView(
+                    physics: NeverScrollableScrollPhysics(),
                     children: List.generate(
-                  // growable: false,
-                  7,
-                  (index) => containerImage(),
-                )),
+                      // growable: false,
+                      7,
+                      (index) => containerImage(index),
+                    )),
               ),
             ],
           ),
