@@ -36,11 +36,9 @@ class _CustomRowWithButtonsState extends State<CustomRowWithButtons> {
             }
             if (index == 0) {
               widget.coffeeIngredient = true;
-              print(widget.coffeeIngredient);//yapılan işlemin sonucunu gözlemlemek için yazdım.Print sonradan silinecek.
               widget.callbackFunction(widget.coffeeIngredient);
             } else {
               widget.coffeeIngredient = false;
-              print(widget.coffeeIngredient);
               widget.callbackFunction(widget.coffeeIngredient);
             }
           });

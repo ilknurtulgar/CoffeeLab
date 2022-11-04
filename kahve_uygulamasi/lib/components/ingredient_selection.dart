@@ -119,26 +119,6 @@ class _IngredientSelectionState extends State<IngredientSelection> {
                     )
                   ]),
                 )),
-            SizedBox(
-              height: 15,
-            ),
-            InkWell(//bu butonu şimdilik denemeler yapmak için geçici olarak koydum custom butonu yapıcam bugün
-                onTap: (() { //bu printleri custom row buttonda basılan değerlerle karşılaştırma yapmak için kullandım.Sonradan silicez.
-                  print('sut is ${kahve.sut}');
-                  print('buz is ${kahve.buz}');
-                  print('seker is ${kahve.seker}');
-                  print('krema is ${kahve.krema}');
-                  print('s çik is ${kahve.sutluCikolata}');
-                  print('b çik is ${kahve.beyazCikolata}');
-                  print('karamel is ${kahve.karamel}');
-                  selectionControl(kahve);
-                }),
-                child: Container(
-                  height: 50,
-                  width: 50,
-                  color: Colors.brown,
-                  child: Text('sonuc butonu'),
-                )),
           ],
         ),
     );
