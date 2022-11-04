@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/components/vertical_text_row.dart';
 import 'package:kahve_uygulamasi/model/coffee_classes.dart';
 import 'package:kahve_uygulamasi/product/page3/page3view.dart';
-import 'custom_row_with_buttons.dart';
+import 'buttons/custom_row_with_buttons.dart';
 class IngredientSelection extends StatefulWidget {
   IngredientSelection({Key? key}) : super(key: key);
 
