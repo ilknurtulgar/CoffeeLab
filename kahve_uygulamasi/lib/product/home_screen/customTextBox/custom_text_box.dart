@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/model/random_text.dart';
 
 import '../../../components/text/customtext/custom_text.dart';
+import '../../../core/base/util/base_utility.dart';
 
 //yeni yazdığım textview.dartdakini kullan
 CustomText customTextBox() {
   return CustomText(
-      borderRadius: RadiusUtility.bordertopRadius,
+      borderRadius: AppRadius.bordertopRadius,
       padding: PaddingUtility.paddingonlyTab,
       textAlign: AlignUtility.textAlign,
       textStyle: barTextStyle(),
@@ -20,7 +21,7 @@ CustomText customTextBox() {
 
 CustomText customText() {
   return CustomText(
-      borderRadius: RadiusUtility.borderRadius,
+      borderRadius: AppRadius.borderRadius,
       padding: PaddingUtility.paddingOnly,
       textAlign: AlignUtility.textAlign,
       textStyle: topTextStyle(),

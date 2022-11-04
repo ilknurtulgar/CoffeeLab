@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../components/sizedbox/sized_box.dart';
 import '../../components/text/positionedtext/positioned_text.dart';
 import '../../core/base/util/base_utility.dart';
+import '../home_screen/home_screen.dart';
 import 'image_pages_views.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -28,9 +29,9 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Stack(children: [
         imagePageViews(),
-        mainTextViewin(AppColor.White),
+        mainTextViewin(AppColor.Koromiko),
         SizedBoxView(),
-        bottomTextViewon(ColorsUtilty.colors),
+        bottomTextViewon(AppColor.White),
       ]),
     );
   }
@@ -49,7 +50,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   PositionedText mainTextViewin(Color color) {
     return PositionedText(
-      textColor: AppColor.colors,
+      textColor: AppColor.White,
       maintext: SplashTextView.maintextx,
       text: SplashTextView.maintext,
       textStyle: textStyleViewPage(color),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../components/image_component.dart';
+import '../../components/text_components.dart';
 import '../../core/base/util/base_utility.dart';
 
 class Page3View extends StatelessWidget {

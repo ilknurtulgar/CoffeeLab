@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/util/base_util.dart';
+import '../../../core/base/util/base_utility.dart';
 
 Expanded containerImage() {
   return Expanded(

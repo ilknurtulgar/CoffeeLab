@@ -1,5 +1,5 @@
-import 'package:de2/core/util/base_util.dart';
 import 'package:flutter/material.dart';
+import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
 
 class PositionedText extends StatelessWidget {
   const PositionedText(
@@ -27,8 +27,8 @@ class PositionedText extends StatelessWidget {
     return Positioned(
       child: Column(
         children: [
-          textMethod(text, textStyle, ColorsUtilty.color),
-          textMethod(maintext, textStyle, ColorsUtilty.colors),
+          textMethod(text, textStyle, AppColor.Koromiko),
+          textMethod(maintext, textStyle, AppColor.WildSand),
         ],
       ),
       top: top,

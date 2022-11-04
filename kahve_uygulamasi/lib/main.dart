@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
+import 'package:kahve_uygulamasi/product/splash_screen/splash_screen.dart';
 
 void main() {
-  runApp(const KahveUygulmasi());
+  runApp(const KahveUygulamasi());
 }
 
 class KahveUygulamasi extends StatelessWidget {
