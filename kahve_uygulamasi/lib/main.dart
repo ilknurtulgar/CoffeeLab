@@ -13,7 +13,7 @@ class KahveUygulamasi extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        backgroundColor: AppColor.WildSand,
+        backgroundColor: AppColor.wildSand,
       ),
       debugShowCheckedModeBanner: false,
       home: SafeArea(
