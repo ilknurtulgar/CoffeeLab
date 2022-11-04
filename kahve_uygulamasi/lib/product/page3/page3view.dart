@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kahve_uygulamasi/core/components/text_components.dart';
-import '../core/base/util/base_utility.dart';
-import '../core/components/image_component.dart';
+
+import '../../components/image_component.dart';
+import '../../core/base/util/base_utility.dart';
 
 class Page3View extends StatelessWidget {
   const Page3View({super.key});

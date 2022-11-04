@@ -1,4 +1,3 @@
-import 'package:de2/companent/text/customtext/text_view.dart';
 import 'package:flutter/material.dart';
 
 class CustomText extends StatefulWidget {

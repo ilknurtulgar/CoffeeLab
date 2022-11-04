@@ -57,7 +57,7 @@ class AppRadius {
 
 class CoffeDefinitions {
   //yeri degisebilir
-  static String Americano =
+  static String americano =
       " Americano sıcak su ekleyerek tek shot espressoya kaynatmak yöntemi ile hazırlanan kahve çeşidi.";
   static String Latte =
       "Tek shot espresso ve buharla ısıtılmış kıvamlı süt ile hazirlanan kahve çeşidi.";

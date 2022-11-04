@@ -1,10 +1,9 @@
 import 'dart:math';
 
-import 'package:de2/model/random_text.dart';
 import 'package:flutter/material.dart';
+import 'package:kahve_uygulamasi/model/random_text.dart';
 
-import '../../../core/util/base_util.dart';
-import '../../../companent/text/customtext/custom_text.dart';
+import '../../../components/text/customtext/custom_text.dart';
 
 //yeni yazdığım textview.dartdakini kullan
 CustomText customTextBox() {
