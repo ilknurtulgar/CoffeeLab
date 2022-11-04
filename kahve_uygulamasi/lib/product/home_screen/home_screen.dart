@@ -1,5 +1,11 @@
-import 'package:flutter/material.dart';
+import 'dart:math';
 
+import 'package:flutter/material.dart';
+import 'package:kahve_uygulamasi/components/buttons/custom_button.dart';
+import 'package:kahve_uygulamasi/components/ingredient_selection.dart';
+import 'package:kahve_uygulamasi/components/text/customtext/text_view.dart';
+import '../../model/coffee_classes.dart';
+import '../page3/page3view.dart';
 import 'column_image_box.dart/column_image_box.dart';
 import 'customTextBox/custom_text_box.dart';
 
@@ -11,6 +17,77 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  late ButtonBox buttonBox=ButtonBox(borderRadius: BorderRadius.circular(15), text: 'Kahveyi Yolla', color: Colors.brown, height: 50, padding: EdgeInsets.zero , textAlign:  TextAlign.center, textStyle: TextStyle(fontSize: 16), width: 200,ontap: (() => selectionControl(kahve)) );
+  Coffee kahve = Coffee();
+  CoffeeUtility coffee_utility = CoffeeUtility();
+  void sendCoffee(CoffeeViewModel onerileriyleKahvee) {
+    Navigator.push(context,MaterialPageRoute(builder: (context) => Page3View(onerileriyleKahve: onerileriyleKahvee),)); 
+  }
+  void determineCoffeeKind(Coffee kahve) {
+    int randomNumber = 0;
+    CoffeeUtility cu_in_function = CoffeeUtility();
+    List<CoffeeViewModel> sutluSekersiz = [cu_in_function.macchiatoS,cu_in_function.cappucinoS,cu_in_function.flatWhiteS];
+    if (kahve.sutluCikolata == true) {
+      sendCoffee(coffee_utility.mochaS); //Mocha
+    } else if (kahve.beyazCikolata == true) {
+      sendCoffee(coffee_utility.whiteChocolateMochaS); // white chocolate mocha
+    } else if (kahve.krema == true) {
+      sendCoffee(coffee_utility.conPannaS); //con panna
+    } else if (kahve.karamel == true) {
+      sendCoffee(coffee_utility.caramelMacchiatoS); //caramel macchiato
+    } else if (kahve.buz == true) {
+      if (kahve.seker == true) {
+        sendCoffee(coffee_utility.frappeS);//frappe
+      } else {
+        if (kahve.sut == true) {
+          sendCoffee(coffee_utility.sogukLatteS);
+        } //soguk latte
+        else {
+          sendCoffee(coffee_utility.iceAmericanoS); //ice americano
+        }
+      }
+    } else if (kahve.sut == true) {
+      if (kahve.seker == true) {
+        sendCoffee(coffee_utility.sicakLatteS); //sicak latte
+      } else {
+        randomNumber = Random().nextInt(3);
+        sendCoffee(sutluSekersiz[randomNumber]);
+      }
+    } else if (kahve.seker == true) {
+      sendCoffee(coffee_utility.turkKahvesiS);//türk kahvesi
+    } else {
+      sendCoffee(coffee_utility.espressoS); //espresso
+    }
+  }
+  void selectionControl(Coffee kahve) {
+    late List<bool?> ingredients_in_function_coffee = [kahve.sut,kahve.buz,kahve.seker,kahve.krema,kahve.sutluCikolata,kahve.beyazCikolata,kahve.karamel];
+    int nullMalzemeSayisi = 0;
+    int i = 0;
+    for (i = 0; i < ingredients_in_function_coffee.length; i++) {
+      if (ingredients_in_function_coffee[i] == null) {
+        nullMalzemeSayisi++;
+      }
+    }
+    if (nullMalzemeSayisi == 0) {
+      determineCoffeeKind(kahve);
+    } else {
+      showDialog(
+        context: context,
+        builder: ((context) => AlertDialog(
+              content: Text('Lütfen bütün malzemeler için seçim yapınız'),
+              backgroundColor: Color.fromARGB(255, 225, 157, 133),
+              actions: [
+                TextButton(
+                    onPressed: () => Navigator.pop(context),
+                    child: Text(
+                      'Tamam',
+                      style: TextStyle(color: Colors.black),
+                    ))
+              ],
+            )),
+      );
+    }
+  }
   @override
   Widget build(BuildContext context) {
     /*SystemChrome.setSystemUIOverlayStyle(
@@ -34,6 +111,8 @@ class _HomeScreenState extends State<HomeScreen> {
           Column(
             children: [
               customText(),
+              IngredientSelection(),
+              CustomButton(buttonBox: buttonBox),
               customTextBox(),
             ],
           )
