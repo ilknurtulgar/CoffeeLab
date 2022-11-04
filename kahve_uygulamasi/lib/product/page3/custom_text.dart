@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/base/util/base_utility.dart';
 
-Container buildTextSuggestion(String coffeName) {
+Container CustomTextSuggestion(String coffeName) {
   return Container(
     width: AppComponentSizes.scroll_Width,
     padding: AppMargin.suggestionsMargin,

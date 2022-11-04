@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:kahve_uygulamasi/product/page3/custom_text.dart';
 
-import 'components/text_components.dart';
 import '../../core/base/util/base_utility.dart';
-import 'components/build_image.dart';
+
+import 'custom_image.dart';
 
 class Page3View extends StatelessWidget {
   const Page3View({super.key});
@@ -34,7 +35,7 @@ class Page3View extends StatelessWidget {
                 ),
                 Expanded(
                   flex: 14,
-                  child: buildImage(tmpImageSrc, AppMargin.containersMargin,
+                  child: CustomImage(tmpImageSrc, AppMargin.containersMargin,
                       AppComponentSizes.big_Width),
                 ),
                 Expanded(
@@ -99,13 +100,13 @@ class Page3View extends StatelessWidget {
             ),
             margin: AppMargin.suggestionsMargin,
             elevation: 10,
-            child: buildImage(
+            child: CustomImage(
                 imagePath, EdgeInsets.all(0), AppComponentSizes.scroll_Width),
           ),
         ),
         Expanded(
           flex: 1,
-          child: buildTextSuggestion(coffeName),
+          child: CustomTextSuggestion(coffeName),
         )
       ],
     );
