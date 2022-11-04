@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/model/coffee_classes.dart';
 
-import '../../components/image_component.dart';
-import '../../components/text_components.dart';
+import 'components/text_components.dart';
 import '../../core/base/util/base_utility.dart';
+import 'components/build_image.dart';
 
 class Page3View extends StatelessWidget {
   const Page3View({super.key, required this.onerileriyleKahve});
@@ -25,7 +25,7 @@ class Page3View extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: AppColor.WildSand,
+          backgroundColor: AppColor.wildSand,
           body: Padding(
             padding: AppMargin.columnMargin,
             child: Column(
@@ -36,7 +36,8 @@ class Page3View extends StatelessWidget {
                 ),
                 Expanded(
                   flex: 14,
-                  child: buildImage(tmpImageSrc),
+                  child: buildImage(tmpImageSrc, AppMargin.containersMargin,
+                      AppComponentSizes.big_Width),
                 ),
                 Expanded(
                   flex: 7,
@@ -65,12 +66,12 @@ class Page3View extends StatelessWidget {
       //height: AppComponentSizes.coffe_exp_height,
       margin: AppMargin.containersMargin,
       decoration: BoxDecoration(
-          borderRadius: AppRadius.componentRadius, color: AppColor.Tacao),
+          borderRadius: AppRadius.componentRadius, color: AppColor.tacao),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Text(
           txt1,
           style: TextStyle(
-              color: AppColor.Black, fontSize: 25, fontWeight: FontWeight.w700),
+              color: AppColor.black, fontSize: 25, fontWeight: FontWeight.w700),
         ),
         SizedBox(
           height: 20,
@@ -80,7 +81,7 @@ class Page3View extends StatelessWidget {
           child: Text(
             txt2,
             style: TextStyle(
-                color: AppColor.Black,
+                color: AppColor.black,
                 fontSize: 18,
                 fontWeight: FontWeight.w700),
           ),
@@ -100,7 +101,8 @@ class Page3View extends StatelessWidget {
             ),
             margin: AppMargin.suggestionsMargin,
             elevation: 10,
-            child: buildImageSuggestion(imagePath),
+            child: buildImage(
+                imagePath, EdgeInsets.all(0), AppComponentSizes.scroll_Width),
           ),
         ),
         Expanded(

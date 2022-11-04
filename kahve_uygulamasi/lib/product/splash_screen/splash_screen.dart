@@ -29,9 +29,9 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Stack(children: [
         imagePageViews(),
-        mainTextViewin(AppColor.Koromiko),
+        mainTextViewin(AppColor.koromiko),
         SizedBoxView(),
-        bottomTextViewon(AppColor.White),
+        bottomTextViewon(AppColor.white),
       ]),
     );
   }
@@ -39,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
 //kahve asistanı ve espresso bazlı kısmı renkleri tutmadı tekrar bak
   PositionedText bottomTextViewon(Color color) {
     return PositionedText(
-        textColor: AppColor.Koromiko,
+        textColor: AppColor.koromiko,
         maintext: SplashTextView.bottomtextx,
         text: SplashTextView.bottomtext,
         textStyle: textStyleViewPage(color),
@@ -50,7 +50,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   PositionedText mainTextViewin(Color color) {
     return PositionedText(
-      textColor: AppColor.White,
+      textColor: AppColor.white,
       maintext: SplashTextView.maintextx,
       text: SplashTextView.maintext,
       textStyle: textStyleViewPage(color),

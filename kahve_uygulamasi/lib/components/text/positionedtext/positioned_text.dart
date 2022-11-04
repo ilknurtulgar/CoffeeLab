@@ -27,8 +27,8 @@ class PositionedText extends StatelessWidget {
     return Positioned(
       child: Column(
         children: [
-          textMethod(text, textStyle, AppColor.Koromiko),
-          textMethod(maintext, textStyle, AppColor.WildSand),
+          textMethod(text, textStyle, AppColor.koromiko),
+          textMethod(maintext, textStyle, AppColor.wildSand),
         ],
       ),
       top: top,
