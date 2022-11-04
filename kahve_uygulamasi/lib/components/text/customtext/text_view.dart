@@ -52,7 +52,7 @@ class ImageBox extends CustomText {
 }
 
 class ButtonBox extends CustomText {
-  final Function ontap;
+  final Function() ontap;
   ButtonBox(
       {required this.ontap,
       required super.borderRadius,

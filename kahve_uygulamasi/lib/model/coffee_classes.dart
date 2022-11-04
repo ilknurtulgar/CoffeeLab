@@ -45,19 +45,19 @@ class CoffeeRecipe{
   Coffee espresso = Coffee(sut: false,buz: false,seker: false,krema: false,sutluCikolata: false,beyazCikolata: false,karamel: false); //
 }
 class CoffeeUtility extends CoffeeRecipe{
-  late CoffeeViewModel caramelMacchiatoS = CoffeeViewModel(coffee: caramelMacchiato,suggestions: [frappe, mocha, whiteChocolateMocha, conPanna],coffeeName: 'cmacchiato');
-  late CoffeeViewModel whiteChocolateMochaS = CoffeeViewModel(coffee: whiteChocolateMocha,suggestions: [mocha, caramelMacchiato, sicakLatte],coffeeName: 'white cho mocha');
-  late CoffeeViewModel mochaS = CoffeeViewModel(coffee: mocha,suggestions: [whiteChocolateMocha, caramelMacchiato, sicakLatte],coffeeName: 'mocha');
-  late CoffeeViewModel conPannaS = CoffeeViewModel(coffee: conPanna,suggestions: [sicakLatte, cappucino, macchiato, flatWhite],coffeeName: 'con panna');
-  late CoffeeViewModel frappeS = CoffeeViewModel(coffee: frappe,suggestions: [sogukLatte,mocha,whiteChocolateMocha,frappe,caramelMacchiato],coffeeName: 'frappe');
-  late CoffeeViewModel iceAmericanoS = CoffeeViewModel(coffee: iceAmericano,suggestions: [espresso, frappe, sogukLatte],coffeeName: 'ice americano');
-  late CoffeeViewModel sicakLatteS = CoffeeViewModel(coffee: sicakLatte,suggestions: [mocha, whiteChocolateMocha, caramelMacchiato],coffeeName: 'sicak latte');
-  late CoffeeViewModel sogukLatteS = CoffeeViewModel(coffee: sicakLatte,suggestions: [mocha, whiteChocolateMocha, caramelMacchiato],coffeeName: 'soguk latte');
-  late CoffeeViewModel cappucinoS = CoffeeViewModel(coffee: cappucino,suggestions: [sicakLatte, macchiato, flatWhite],coffeeName: 'capp');
-  late CoffeeViewModel macchiatoS = CoffeeViewModel(coffee: macchiato,suggestions: [cappucino, sicakLatte, espresso],coffeeName: 'macc');
-  late CoffeeViewModel flatWhiteS = CoffeeViewModel(coffee: flatWhite,suggestions: [cappucino, macchiato, espresso],coffeeName: 'flat white');
-  late CoffeeViewModel turkKahvesiS = CoffeeViewModel(coffee: turkKahvesi,suggestions: [iceAmericano, espresso],coffeeName: 'türk kahvesi');
-  late CoffeeViewModel espressoS = CoffeeViewModel(coffee: espresso,suggestions: [iceAmericano, cappucino, macchiato, flatWhite],coffeeName: 'espresso');
+  late CoffeeViewModel caramelMacchiatoS = CoffeeViewModel(coffee: caramelMacchiato,suggestions: [frappeS, mochaS, whiteChocolateMochaS, conPannaS],coffeeName: 'cmacchiato');
+  late CoffeeViewModel whiteChocolateMochaS = CoffeeViewModel(coffee: whiteChocolateMocha,suggestions: [mochaS, caramelMacchiatoS, sicakLatteS],coffeeName: 'white cho mocha');
+  late CoffeeViewModel mochaS = CoffeeViewModel(coffee: mocha,suggestions: [whiteChocolateMochaS, caramelMacchiatoS, sicakLatteS],coffeeName: 'mocha');
+  late CoffeeViewModel conPannaS = CoffeeViewModel(coffee: conPanna,suggestions: [sicakLatteS, cappucinoS, macchiatoS, flatWhiteS],coffeeName: 'con panna');
+  late CoffeeViewModel frappeS = CoffeeViewModel(coffee: frappe,suggestions: [sogukLatteS,mochaS,whiteChocolateMochaS,frappeS,caramelMacchiatoS],coffeeName: 'frappe');
+  late CoffeeViewModel iceAmericanoS = CoffeeViewModel(coffee: iceAmericano,suggestions: [espressoS, frappeS, sogukLatteS],coffeeName: 'ice americano');
+  late CoffeeViewModel sicakLatteS = CoffeeViewModel(coffee: sicakLatte,suggestions: [mochaS, whiteChocolateMochaS, caramelMacchiatoS],coffeeName: 'sicak latte');
+  late CoffeeViewModel sogukLatteS = CoffeeViewModel(coffee: sicakLatte,suggestions: [mochaS, whiteChocolateMochaS, caramelMacchiatoS],coffeeName: 'soguk latte');
+  late CoffeeViewModel cappucinoS = CoffeeViewModel(coffee: cappucino,suggestions: [sicakLatteS, macchiatoS, flatWhiteS],coffeeName: 'capp');
+  late CoffeeViewModel macchiatoS = CoffeeViewModel(coffee: macchiato,suggestions: [cappucinoS, sicakLatteS, espressoS],coffeeName: 'macc');
+  late CoffeeViewModel flatWhiteS = CoffeeViewModel(coffee: flatWhite,suggestions: [cappucinoS, macchiatoS, espressoS],coffeeName: 'flat white');
+  late CoffeeViewModel turkKahvesiS = CoffeeViewModel(coffee: turkKahvesi,suggestions: [iceAmericanoS, espressoS],coffeeName: 'türk kahvesi');
+  late CoffeeViewModel espressoS = CoffeeViewModel(coffee: espresso,suggestions: [iceAmericanoS, cappucinoS, macchiatoS, flatWhiteS],coffeeName: 'espresso');
 }
 
 class CoffeDefinitions {
