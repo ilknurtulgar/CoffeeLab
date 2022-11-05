@@ -33,7 +33,7 @@ class CoffeeViewModel {
   List<CoffeeInformationModel> suggestions = [];
   CoffeeInformationModel coffee;
   CoffeeViewModel({
-    required this.coffee,    // frappe cappucino flat white turk kahvesi espresso
+    required this.coffee, // frappe cappucino flat white turk kahvesi espresso
     required this.suggestions,
   });
 }
@@ -155,7 +155,7 @@ class CoffeeInformationModelUtility {
       coffeeName: 'latte',
       coffeeImagAsset: ImageUtility.latteAsset,
       coffeeInformation: CoffeDefinitions.latte);
-   CoffeeInformationModel iceLatteIM = CoffeeInformationModel(
+  CoffeeInformationModel iceLatteIM = CoffeeInformationModel(
       coffeeName: 'ice latte',
       coffeeImagAsset: ImageUtility.iceLatteAsset,
       coffeeInformation: CoffeDefinitions.iceLatte);
@@ -205,128 +205,62 @@ class CoffeeInformationModelUtility {
 class CoffeeViewModelUtility extends CoffeeInformationModelUtility {
   late CoffeeViewModel caramelMacchiatoVM = CoffeeViewModel(
     coffee: caramelMacchiatoIM,
-    suggestions: [mochaIM,latteIM, iceAmericanoIM],
+    suggestions: [mochaIM, latteIM, iceAmericanoIM],
   );
-  late CoffeeViewModel frappeVM=CoffeeViewModel(
-    coffee: frappeIM,suggestions: [iceLatteIM,mochaIM,whiteChocolateMochaIM,frappeIM,caramelMacchiatoIM]
+  late CoffeeViewModel frappeVM = CoffeeViewModel(
+      coffee: frappeIM,
+      suggestions: [
+        iceLatteIM,
+        mochaIM,
+        whiteChocolateMochaIM,
+        frappeIM,
+        caramelMacchiatoIM
+      ]);
+  late CoffeeViewModel cappucinoVM = CoffeeViewModel(
+    coffee: frappeIM,
+    suggestions: [latteIM, macchiatoIM, flatWhiteIM],
   );
-  late CoffeeViewModel cappucinoVM=CoffeeViewModel(
-    coffee: frappeIM,suggestions: [latteIM, macchiatoIM, flatWhiteIM],
+  late CoffeeViewModel flatWhiteVM = CoffeeViewModel(
+    coffee: frappeIM,
+    suggestions: [cappucinoIM, macchiatoIM, espressoIM],
   );
-  late CoffeeViewModel flatWhiteVM=CoffeeViewModel(
-    coffee: frappeIM,suggestions: [cappucinoIM, macchiatoIM, espressoIM],
+  late CoffeeViewModel turkKahvesiVM = CoffeeViewModel(
+    coffee: frappeIM,
+    suggestions: [iceAmericanoIM, espressoIM],
   );
-  late CoffeeViewModel turkKahvesiVM=CoffeeViewModel(
-    coffee: frappeIM,suggestions: [iceAmericanoIM, espressoIM],
-  );
-  late CoffeeViewModel iceLatteVM=CoffeeViewModel(
+  late CoffeeViewModel iceLatteVM = CoffeeViewModel(
     coffee: iceLatteIM,
-    suggestions: [mochaIM, whiteChocolateMochaIM, caramelMacchiatoIM],);
-  late CoffeeViewModel latteVM=CoffeeViewModel(
-    coffee:latteIM,
     suggestions: [mochaIM, whiteChocolateMochaIM, caramelMacchiatoIM],
   );
+  late CoffeeViewModel latteVM = CoffeeViewModel(
+    coffee: latteIM,
+    suggestions: [mochaIM, whiteChocolateMochaIM, caramelMacchiatoIM],
+  );
+  late CoffeeViewModel mochaVM = CoffeeViewModel(
+    coffee: mochaIM,
+    suggestions: [whiteChocolateMochaIM, caramelMacchiatoIM, latteIM],
+  );
+  late CoffeeViewModel conPannaVM = CoffeeViewModel(
+    coffee: caramelMacchiatoIM,
+    suggestions: [latteIM, cappucinoIM, macchiatoIM, flatWhiteIM],
+  );
+  late CoffeeViewModel iceAmericanoVM = CoffeeViewModel(
+    coffee: iceAmericanoIM,
+    suggestions: [espressoIM, frappeIM, iceLatteIM],
+  );
+  late CoffeeViewModel macchiatoVM = CoffeeViewModel(
+    coffee: macchiatoIM,
+    suggestions: [cappucinoIM, latteIM, espressoIM],
+  );
+  late CoffeeViewModel espressoVM = CoffeeViewModel(
+    coffee: espressoIM,
+    suggestions: [iceAmericanoIM, cappucinoIM, macchiatoIM, flatWhiteIM],
+  );
+  late CoffeeViewModel whiteChocolateMochaVM = CoffeeViewModel(
+    coffee: whiteChocolateMochaIM,
+    suggestions: [mochaIM, caramelMacchiatoIM, latteIM],
+  );
 }
-
-/*
-class CoffeeUtility extends CoffeeRecipe {
-  late CoffeeViewModel caramelMacchiatoS = CoffeeViewModel(
-    coffee: caramelMacchiato,
-    suggestions: [frappeS, mochaS, whiteChocolateMochaS, conPannaS],
-    coffeeName: 'cmacchiato',
-    coffeeInformation: CoffeDefinitions.caramelMacchiato,
-    coffeeImagePath: ImageUtility.caramelMacchiatoAsset,
-  );
-  late CoffeeViewModel whiteChocolateMochaS = CoffeeViewModel(
-    coffee: whiteChocolateMocha,
-    suggestions: [mochaS, caramelMacchiatoS, sicakLatteS],
-    coffeeName: 'white cho mocha',
-    coffeeInformation: CoffeDefinitions.whiteChocolateMocha,
-    coffeeImagePath: ImageUtility.whiteChocolateMochaAsset,
-  );
-  late CoffeeViewModel mochaS = CoffeeViewModel(
-    coffee: mocha,
-    suggestions: [whiteChocolateMochaS, caramelMacchiatoS, sicakLatteS],
-    coffeeName: 'mocha',
-    coffeeInformation: CoffeDefinitions.mocha,
-    coffeeImagePath: ImageUtility.mochaAsset,
-  );
-  late CoffeeViewModel conPannaS = CoffeeViewModel(
-    coffee: conPanna,
-    suggestions: [sicakLatteS, cappucinoS, macchiatoS, flatWhiteS],
-    coffeeName: 'con panna',
-    coffeeInformation: CoffeDefinitions.conPanna,
-    coffeeImagePath: ImageUtility.conPannaAsset,
-  );
-  late CoffeeViewModel frappeS = CoffeeViewModel(
-    coffee: frappe,
-    suggestions: [
-      sogukLatteS,
-      mochaS,
-      whiteChocolateMochaS,
-      frappeS,
-      caramelMacchiatoS
-    ],
-    coffeeName: 'frappe',
-    coffeeInformation: CoffeDefinitions.frappe,
-    coffeeImagePath: CoffeDefinitions.frappe,
-  );
-  late CoffeeViewModel iceAmericanoS = CoffeeViewModel(
-    coffee: iceAmericano,
-    suggestions: [espressoS, frappeS, sogukLatteS],
-    coffeeName: 'ice americano',
-    coffeeInformation: CoffeDefinitions.iceAmericano,
-    coffeeImagePath: ImageUtility.iceAmericanoAsset,
-  );
-  late CoffeeViewModel sicakLatteS = CoffeeViewModel(
-    coffee: sicakLatte,
-    suggestions: [mochaS, whiteChocolateMochaS, caramelMacchiatoS],
-    coffeeName: 'sicak latte',
-    coffeeInformation: CoffeDefinitions.latte,
-    coffeeImagePath: ImageUtility.latteAsset,
-  );
-  late CoffeeViewModel sogukLatteS = CoffeeViewModel(
-    coffee: sicakLatte,
-    suggestions: [mochaS, whiteChocolateMochaS, caramelMacchiatoS],
-    coffeeName: 'soguk latte',
-    coffeeInformation: CoffeDefinitions.iceLatte,
-    coffeeImagePath: CoffeDefinitions.iceLatte,
-  );
-  late CoffeeViewModel cappucinoS = CoffeeViewModel(
-    coffee: cappucino,
-    suggestions: [sicakLatteS, macchiatoS, flatWhiteS],
-    coffeeName: 'capp',
-    coffeeInformation: CoffeDefinitions.cappucino,
-    coffeeImagePath: ImageUtility.cappucinoAsset,
-  );
-  late CoffeeViewModel macchiatoS = CoffeeViewModel(
-    coffee: macchiato,
-    suggestions: [cappucinoS, sicakLatteS, espressoS],
-    coffeeName: 'macc',
-    coffeeInformation: CoffeDefinitions.macchiato,
-    coffeeImagePath: ImageUtility.macchiatoAsset,
-  );
-  late CoffeeViewModel flatWhiteS = CoffeeViewModel(
-    coffee: flatWhite,
-    suggestions: [cappucinoS, macchiatoS, espressoS],
-    coffeeName: 'flat white',
-    coffeeInformation: CoffeDefinitions.flatWhite,
-    coffeeImagePath: ImageUtility.flatWhiteAsset,
-  );
-  late CoffeeViewModel turkKahvesiS = CoffeeViewModel(
-      coffee: turkKahvesi,
-      suggestions: [iceAmericanoS, espressoS],
-      coffeeName: 'türk kahvesi',
-      coffeeInformation: CoffeDefinitions.turkKahvesi,
-      coffeeImagePath: ImageUtility.espressoAsset);
-  late CoffeeViewModel espressoS = CoffeeViewModel(
-      coffee: espresso,
-      suggestions: [iceAmericanoS, cappucinoS, macchiatoS, flatWhiteS],
-      coffeeName: 'espresso',
-      coffeeInformation: CoffeDefinitions.espresso,
-      coffeeImagePath: ImageUtility.espressoAsset);
-}
-*/
 
 class CoffeDefinitions {
   static String conPanna =

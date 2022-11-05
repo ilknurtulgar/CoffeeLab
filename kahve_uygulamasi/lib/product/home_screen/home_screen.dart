@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
       width: 200,
       ontap: (() => selectionControl(kahve)));
   Coffee kahve = Coffee();
-  CoffeeUtility coffee_utility = CoffeeUtility();
+  CoffeeViewModelUtility coffee_utility = CoffeeViewModelUtility();
   void sendCoffee(CoffeeViewModel onerileriyleKahvee) {
     Navigator.push(
         context,
@@ -40,42 +40,42 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void determineCoffeeKind(Coffee kahve) {
     int randomNumber = 0;
-    CoffeeUtility cu_in_function = CoffeeUtility();
+    CoffeeViewModelUtility cu_in_function = CoffeeViewModelUtility();
     List<CoffeeViewModel> sutluSekersiz = [
-      cu_in_function.macchiatoS,
-      cu_in_function.cappucinoS,
-      cu_in_function.flatWhiteS
+      cu_in_function.macchiatoVM,
+      cu_in_function.cappucinoVM,
+      cu_in_function.flatWhiteVM
     ];
     if (kahve.sutluCikolata == true) {
-      sendCoffee(coffee_utility.mochaS); //Mocha
+      sendCoffee(coffee_utility.mochaVM); //Mocha
     } else if (kahve.beyazCikolata == true) {
-      sendCoffee(coffee_utility.whiteChocolateMochaS); // white chocolate mocha
+      sendCoffee(coffee_utility.whiteChocolateMochaVM); // white chocolate mocha
     } else if (kahve.krema == true) {
-      sendCoffee(coffee_utility.conPannaS); //con panna
+      sendCoffee(coffee_utility.conPannaVM); //con panna
     } else if (kahve.karamel == true) {
-      sendCoffee(coffee_utility.caramelMacchiatoS); //caramel macchiato
+      sendCoffee(coffee_utility.caramelMacchiatoVM); //caramel macchiato
     } else if (kahve.buz == true) {
       if (kahve.seker == true) {
-        sendCoffee(coffee_utility.frappeS); //frappe
+        sendCoffee(coffee_utility.frappeVM); //frappe
       } else {
         if (kahve.sut == true) {
-          sendCoffee(coffee_utility.sogukLatteS);
+          sendCoffee(coffee_utility.iceLatteVM);
         } //soguk latte
         else {
-          sendCoffee(coffee_utility.iceAmericanoS); //ice americano
+          sendCoffee(coffee_utility.iceAmericanoVM); //ice americano
         }
       }
     } else if (kahve.sut == true) {
       if (kahve.seker == true) {
-        sendCoffee(coffee_utility.sicakLatteS); //sicak latte
+        sendCoffee(coffee_utility.latteVM); //sicak latte
       } else {
         randomNumber = Random().nextInt(3);
         sendCoffee(sutluSekersiz[randomNumber]);
       }
     } else if (kahve.seker == true) {
-      sendCoffee(coffee_utility.turkKahvesiS); //türk kahvesi
+      sendCoffee(coffee_utility.turkKahvesiVM); //türk kahvesi
     } else {
-      sendCoffee(coffee_utility.espressoS); //espresso
+      sendCoffee(coffee_utility.espressoVM); //espresso
     }
   }
 
