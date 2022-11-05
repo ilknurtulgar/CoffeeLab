@@ -43,6 +43,7 @@ class _CustomTextState extends State<CustomText> {
         child: Container(
           alignment: Alignment.center,
           child: Column(
+            
             children: [
               TextView(widget.text1, widget.textStyle),
               TextView(widget.text2, widget.textStyle),
