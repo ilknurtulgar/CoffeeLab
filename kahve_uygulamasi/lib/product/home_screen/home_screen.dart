@@ -1,9 +1,11 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/components/buttons/custom_button.dart';
-import 'package:kahve_uygulamasi/components/text/custom_text/custom_text.dart';
 import 'package:kahve_uygulamasi/product/home_screen/ingredient_selection.dart';
+import '../../components/custom_space.dart';
+import '../../components/text/custom_text/custom_text.dart';
+import '../../core/base/util/base_utility.dart';
+import '../../core/base/util/ingredient_selection_utility.dart';
 import '../../model/coffee/coffeUI_data/coffee_uidata_model_utility.dart';
 import '../../model/coffee/coffee_view_model/coffee_models.dart';
 import '../../model/custom_text_view.dart';
@@ -20,14 +22,14 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   late ButtonBox buttonBox = ButtonBox(
-      borderRadius: BorderRadius.circular(15),
-      text: 'Kahveyi Yolla',
-      color: Colors.brown,
-      height: 50,
-      padding: EdgeInsets.zero,
-      textAlign: TextAlign.center,
-      textStyle: TextStyle(fontSize: 16),
-      width: 170,
+      borderRadius: IngredientChoosingUtility.borderRadius,
+      text: IngredientChoosingUtility.sendButtonText,
+      color: IngredientChoosingUtility.sendButtonColor,
+      height: IngredientChoosingUtility.sendButtonHeight,
+      width: IngredientChoosingUtility.sendButtonWidth,
+      padding: IngredientChoosingUtility.sendButtonPadding,
+      textAlign: IngredientChoosingUtility.sendButtonTextAlign,
+      textStyle: IngredientChoosingUtility.sendButtonTextStyle,
       ontap: (() => selectionControl(kahve)));
   Coffee kahve = Coffee();
   CoffeeViewModelUtility coffeeUtility = CoffeeViewModelUtility();
@@ -109,18 +111,27 @@ class _HomeScreenState extends State<HomeScreen> {
     return showDialog(
       context: context,
       builder: ((context) => AlertDialog(
-            content: Text('Lütfen bütün malzemeler için seçim yapınız'),
-            backgroundColor: Color.fromARGB(255, 225, 157, 133),
-            actions: [
-              TextButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: Text(
-                    'Tamam',
-                    style: TextStyle(color: Colors.black),
-                  ))
-            ],
+            content: Text(
+              IngredientChoosingUtility.alertDialogWarningText,
+              style: buttonTextStyle(),
+            ),
+            contentPadding: IngredientChoosingUtility.alertDialogContentPadding,
+            backgroundColor:
+                IngredientChoosingUtility.alertDialogBackgroundColor,
+            actionsPadding: IngredientChoosingUtility.alertDialogActionPadding,
+            actions: [alertDialogTextButton(context)],
           )),
     );
+  }
+
+  final String shortDilogtext = "Tamam";
+  TextButton alertDialogTextButton(BuildContext context) {
+    return TextButton(
+        onPressed: () => Navigator.pop(context),
+        child: Text(
+          shortDilogtext,
+          style: buttonTextStyle(),
+        ));
   }
 
   @override
@@ -180,20 +191,14 @@ class _ColumnCustomViewState extends State<ColumnCustomView> {
       mainAxisSize: Projectutility.mainAxisSize,
       children: [
         CustomTextBoxs(customTextModel: customTextModelBox),
-        SizedBox(
-          height: 5,
-        ),
+        CustomSpace(6, 0),
         IngredientSelection(
           kahve: widget.kahve,
         ),
-        SizedBox(
-          height: 5,
-        ),
+        CustomSpace(6, 0),
         CustomButton(buttonBox: widget.buttonBox),
-        SizedBox(
-          height: 5,
-        ),
-        CustomTextBoxs(customTextModel: customTextModelRandom),
+        CustomSpace(6, 0),
+        CustomTextBoxs(customTextModel: customTextModelBox),
       ],
     );
   }

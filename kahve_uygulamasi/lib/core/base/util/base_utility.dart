@@ -10,6 +10,7 @@ class AppColor {
   static Color mineShaft = Color(0xFF333333);
   static Color merino = Color(0xFFF4ECE4);
   static Color transparent = Colors.transparent;
+  static Color brown = Colors.brown;
 }
 
 class AppComponentSizes {
@@ -53,8 +54,11 @@ TextStyle barTextStyle() =>
 TextStyle topTextStyle() =>
     TextStyle(fontSize: 16, fontWeight: FontWeight.w600, fontFamily: "Poppins");
 
-TextStyle buttonTextStyle() =>
-    TextStyle(fontSize: 12, fontWeight: FontWeight.w600, fontFamily: "Poppins");
+TextStyle buttonTextStyle() => TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w600,
+    fontFamily: "Poppins",
+    color: Colors.black);
 
 class AppRadius {
   static BorderRadius componentRadius = BorderRadius.circular(30);

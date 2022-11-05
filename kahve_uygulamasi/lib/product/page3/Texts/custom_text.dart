@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/base/util/base_utility.dart';
 
-Container CustomText(String text, EdgeInsets padding_, double fontSize,
+Container customText(String text, EdgeInsets padding_, double fontSize,
     double width, TextAlign align, FontWeight fontWeight) {
   return Container(
     width: width,

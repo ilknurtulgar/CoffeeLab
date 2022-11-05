@@ -21,7 +21,7 @@ Widget Suggestion(String imagePath, String coffeName) {
       ),
       Expanded(
         flex: 1,
-        child: CustomText(
+        child: customText(
             coffeName,
             AppMargin.suggestionsMargin,
             TextStyleView.fontSizeSuggestion,

@@ -14,14 +14,14 @@ Container textContainer(String coffeName, String coffeeInfo) {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CustomText(
+          customText(
               coffeName,
               PaddingUtility.coffeNamePading,
               TextStyleView.fontSizePage3,
               AppComponentSizes.big_Width,
               AlignUtility.textAlign,
               TextStyleView.fontWeight),
-          CustomText(
+          customText(
               coffeeInfo,
               PaddingUtility.textPading,
               TextStyleView.fontSizeSuggestion,
