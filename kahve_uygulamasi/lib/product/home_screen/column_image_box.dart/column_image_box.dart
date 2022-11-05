@@ -9,7 +9,7 @@ Expanded containerImage(index) {
       height: 100,
       width: 114.25,
       child: Image.asset(
-        imageUi[index],
+        imageUi[1],
       ),
     ),
   );

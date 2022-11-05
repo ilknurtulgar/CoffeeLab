@@ -15,9 +15,9 @@ CustomText customTextBox() {
       textAlign: AlignUtility.textAlign,
       textStyle: barTextStyle(),
       color: Color(0xffFBDABC),
-      height: 193,
+      height: 75,
       text1: randomtext[Random().nextInt(6)],
-      width: 196);
+      width: 55);
 }
 
 CustomText customText() {
@@ -29,5 +29,5 @@ CustomText customText() {
       color: Color(0xffFBDABC),
       height: 66,
       text1: "KAHVENDE NELER OLSUN?",
-      width: 213);
+      width: 150);
 }
