@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../components/sizedbox/sized_box.dart';
 import '../../components/text/positionedtext/positioned_text.dart';
 import '../../core/base/util/base_utility.dart';
 import '../home_screen/home_screen.dart';
@@ -16,7 +15,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   int seconds = 2;
   @override
- void initState() {
+  void initState() {
     super.initState();
     Future.delayed(Duration(seconds: seconds), () async {
       Navigator.pushReplacement(
@@ -30,7 +29,6 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Stack(children: [
         imagePageViews(),
         mainTextViewin(AppColor.koromiko),
-       // SizedBoxView(),
         bottomTextViewon(AppColor.white),
       ]),
     );

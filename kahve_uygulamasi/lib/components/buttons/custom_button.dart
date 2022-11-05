@@ -17,12 +17,16 @@ class _CustomButtonState extends State<CustomButton> {
         child: Container(
             height: widget.buttonBox.height,
             width: widget.buttonBox.width,
-            decoration: BoxDecoration(
-                borderRadius: widget.buttonBox.borderRadius,
-                color: widget.buttonBox.color),
+            decoration: _boxDecoration(),
             child: Center(
               child: Text(widget.buttonBox.text ?? "",
                   style: widget.buttonBox.textStyle),
             )));
+  }
+
+  BoxDecoration _boxDecoration() {
+    return BoxDecoration(
+        borderRadius: widget.buttonBox.borderRadius,
+        color: widget.buttonBox.color);
   }
 }
