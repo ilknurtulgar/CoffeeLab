@@ -20,13 +20,15 @@ Container TextContainer(String coffeName, String coffeeInfo) {
               PaddingUtility.coffeNamePading,
               TextStyleView.fontSizePage3,
               AppComponentSizes.big_Width,
-              AlignUtility.textAlign),
+              AlignUtility.textAlign,
+              TextStyleView.fontWeight),
           CustomText(
               coffeeInfo,
               PaddingUtility.textPading,
               TextStyleView.fontSizeSuggestion,
               AppComponentSizes.coffeName_Width,
-              AlignUtility.textAlign),
+              AlignUtility.textAlign,
+              TextStyleView.fontWeightPage3),
         ],
       ));
 }

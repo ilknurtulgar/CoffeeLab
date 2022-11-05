@@ -73,7 +73,7 @@ class MainPositioned {
 class TextStyleView {
   static String fontFamily = "Amiri";
   static String fontFamilyPoppins = "Poppins";
-  static double fontSizePage3 = 32;
+  static double fontSizePage3 = 25;
   static double fontSizeSuggestion = 16;
   static double fontSize = 50;
   static FontWeight fontWeight = FontWeight.w700;

@@ -22,9 +22,7 @@ class KahveUygulamasi extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: SafeArea(
-        child: Scaffold(
-          body: HomeScreen()
-        ),
+        child: Scaffold(body: Page3View(coffeData: deneme.macchiatoVM)),
       ),
     );
   }

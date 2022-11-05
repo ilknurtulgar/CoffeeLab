@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/base/util/base_utility.dart';
 
 Container CustomText(String text, EdgeInsets padding_, double fontSize,
-    double width, TextAlign align) {
+    double width, TextAlign align, FontWeight fontWeight) {
   return Container(
     width: width,
     padding: padding_,
@@ -13,7 +13,7 @@ Container CustomText(String text, EdgeInsets padding_, double fontSize,
       style: TextStyle(
           fontFamily: TextStyleView.fontFamilyPoppins,
           fontSize: fontSize,
-          fontWeight: TextStyleView.fontWeightPage3,
+          fontWeight: fontWeight,
           color: AppColor.black),
     ),
   );
