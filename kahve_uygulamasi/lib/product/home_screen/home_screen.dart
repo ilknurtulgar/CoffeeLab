@@ -126,31 +126,30 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Expanded(
             flex: 1,
-            child: ColumnImage(
-              child: ListView(
-                  clipBehavior: Clip.hardEdge,
-                  physics: NeverScrollableScrollPhysics(),
-                  children: List.generate(
-                    // growable: false,
-                    7,
-                    (index) => containerImage(index),
-                  )),
+            child: Column(
+              children: [
+                ColumnImage(
+                  child: ListView(
+                      clipBehavior: Clip.hardEdge,
+                      physics: NeverScrollableScrollPhysics(),
+                      children: List.generate(
+                        // growable: false,
+                        7,
+                        (index) => containerImage(index),
+                      )),
+                ),
+              ],
             ),
           ),
           Expanded(
             flex: 2,
-            child: Center(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  customText(),
-                  IngredientSelection(
-                    kahve: kahve,
-                  ),
-                  CustomButton(buttonBox: buttonBox),
-                  customTextBox(),
-                ],
-              ),
+            child: Column(
+              children: [
+                customText(),
+                IngredientSelection(),
+                CustomButton(buttonBox: buttonBox),
+                customTextBox(),
+              ],
             ),
           )
         ],
