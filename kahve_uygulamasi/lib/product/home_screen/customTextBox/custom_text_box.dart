@@ -9,6 +9,7 @@ import '../../../core/base/util/base_utility.dart';
 //yeni yazdığım textview.dartdakini kullan
 CustomText customTextBox() {
   return CustomText(
+      borderColor: AppColor.white,
       borderRadius: AppRadius.bordertopRadius,
       padding: PaddingUtility.paddingonlyTab,
       textAlign: AlignUtility.textAlign,
