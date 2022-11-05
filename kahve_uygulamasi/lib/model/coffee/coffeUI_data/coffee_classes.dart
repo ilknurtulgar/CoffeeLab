@@ -194,7 +194,7 @@ class CoffeeInformationModelUtility {
       coffeeInformation: CoffeDefinitions.flatWhite);
   CoffeeInformationModel turkKahvesiIM = CoffeeInformationModel(
       coffeeName: "Türk Kahvesi",
-      coffeeImagAsset: ImageUtility.cappucinoAsset,
+      coffeeImagAsset: ImageUtility.turkKahvesiAsset,
       coffeeInformation: CoffeDefinitions.turkKahvesi);
   CoffeeInformationModel espressoIM = CoffeeInformationModel(
       coffeeName: "Espresso",

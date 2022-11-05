@@ -11,4 +11,5 @@ class ImageUtility {
   static String flatWhiteAsset = "assets/images/flatWhite.jpeg";
   static String espressoAsset = "assets/images/espresso.jpeg";
   static String iceLatteAsset = "assets/images/icelatte.jpeg";
+  static String turkKahvesiAsset = "assets/images/türkkahvesi.jpg";
 }
