@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
+import 'package:kahve_uygulamasi/model/coffee_classes.dart';
 import 'package:kahve_uygulamasi/product/page3/page3view.dart';
 import 'package:kahve_uygulamasi/product/splash_screen/splash_screen.dart';
 
 void main() {
-  runApp(const KahveUygulamasi());
+  runApp(KahveUygulamasi());
 }
 
 class KahveUygulamasi extends StatelessWidget {
-  const KahveUygulamasi({Key? key}) : super(key: key);
+  KahveUygulamasi({Key? key}) : super(key: key);
+  final CoffeeUtility deneme = CoffeeUtility();
 
   @override
   Widget build(BuildContext context) {
