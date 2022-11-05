@@ -9,8 +9,8 @@ import 'custom_image.dart';
 import 'suggestion.dart';
 
 class Page3View extends StatelessWidget {
-  const Page3View({super.key, required this.onerileriyleKahve});
-  final CoffeeViewModel onerileriyleKahve;
+  const Page3View({super.key, required this.coffeData});
+  final CoffeeViewModel coffeData;
 
   //TAMAMEN GECICI VERI ALINDIGINDA DEGISECEK
   final String tmpImageSrc =
@@ -35,12 +35,13 @@ class Page3View extends StatelessWidget {
               children: [
                 Expanded(
                   flex: 6,
-                  child: TextContainer(tmptxt, tmptxt),
+                  child: TextContainer(coffeData.coffee.coffeeName,
+                      coffeData.coffee.coffeeInformation),
                 ),
                 Expanded(
                   flex: 14,
-                  child: CustomImage(tmpImageSrc, AppMargin.containersMargin,
-                      AppComponentSizes.big_Width),
+                  child: CustomImage(coffeData.coffee.coffeeImagAsset,
+                      AppMargin.containersMargin, AppComponentSizes.big_Width),
                 ),
                 Expanded(
                   flex: 7,
@@ -49,7 +50,8 @@ class Page3View extends StatelessWidget {
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) => //degiistirilecek
-                          Suggestion(tmpImagesrc2, tmptxt2),
+                          Suggestion(coffeData.suggestions[index].coffeeName,
+                              coffeData.suggestions[index].coffeeImagAsset),
                       itemCount: 5,
                     ),
                   ),

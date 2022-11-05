@@ -13,7 +13,7 @@ Widget CustomImage(
     child: ClipRRect(
       borderRadius: AppRadius.componentRadius,
       child: Image(
-        image: NetworkImage(imagePath),
+        image: AssetImage(imagePath),
         fit: BoxFit.fill,
       ),
     ),

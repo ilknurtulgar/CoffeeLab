@@ -14,7 +14,7 @@ class IngredientSelection extends StatefulWidget {
 
 class _IngredientSelectionState extends State<IngredientSelection> {
   Coffee kahve = Coffee();
-  CoffeeUtility coffee_utility = CoffeeUtility();
+  CoffeeViewModelUtility coffee_utility = CoffeeViewModelUtility();
   List<String> ingredientName = [
     'süt',
     'buz',

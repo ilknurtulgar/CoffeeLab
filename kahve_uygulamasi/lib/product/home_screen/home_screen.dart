@@ -29,12 +29,11 @@ class _HomeScreenState extends State<HomeScreen> {
       ontap: (() => selectionControl(kahve)));
   Coffee kahve = Coffee();
   CoffeeViewModelUtility coffee_utility = CoffeeViewModelUtility();
-  void sendCoffee(CoffeeViewModel onerileriyleKahvee) {
+  void sendCoffee(CoffeeViewModel coffeeData) {
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) =>
-              Page3View(onerileriyleKahve: onerileriyleKahvee),
+          builder: (context) => Page3View(coffeData: coffeeData),
         ));
   }
 
