@@ -11,16 +11,6 @@ class Page3View extends StatelessWidget {
   const Page3View({super.key, required this.coffeData});
   final CoffeeViewModel coffeData;
 
-  //TAMAMEN GECICI VERI ALINDIGINDA DEGISECEK
-  final String tmpImageSrc =
-      "https://www.eliteworldhotels.com.tr/Resources/Blog/ImageFile/evde-yapabileceginiz-birbirinden-ozel-9-kahve-tarifi_m.jpg";
-  final String tmptxt = "ConPanna";
-  final String tmptxt2 = "Americano";
-  final String tmpdef =
-      "Caffe Americano is made by one shot of an espresso and 2 shots of water.";
-  final String tmpImagesrc2 =
-      "https://kahvebaz.com/wp-content/uploads/2016/01/Latte-660x330.jpg";
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
