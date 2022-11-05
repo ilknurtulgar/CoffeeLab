@@ -50,9 +50,10 @@ class Page3View extends StatelessWidget {
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) => //degiistirilecek
-                          Suggestion(coffeData.suggestions[index].coffeeName,
-                              coffeData.suggestions[index].coffeeImagAsset),
-                      itemCount: 5,
+                          Suggestion(
+                              coffeData.suggestions[index].coffeeImagAsset,
+                              coffeData.suggestions[index].coffeeName),
+                      itemCount: coffeData.suggestions.length,
                     ),
                   ),
                 )

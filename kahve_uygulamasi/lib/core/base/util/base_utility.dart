@@ -13,6 +13,7 @@ class AppColor {
 
 class AppComponentSizes {
   static double big_Width = 375; //kahve aciklamasi ve kahve resmi
+  static double coffeName_Width = 400;
   static double text_Width = 300;
   static double scroll_Width = 220; //son sayfa bottom scroll componentler
   static double scroll_height = 180;
@@ -21,16 +22,19 @@ class AppComponentSizes {
 }
 
 class AppMargin {
-  static EdgeInsets columnMargin = EdgeInsets.symmetric(vertical: 10);
+  static EdgeInsets columnMargin = EdgeInsets.symmetric(vertical: 0);
   static EdgeInsets containersMargin =
-      EdgeInsets.symmetric(vertical: 7, horizontal: 20);
+      EdgeInsets.only(bottom: 8, left: 20, right: 20);
 
-  static EdgeInsets suggestionsMargin = EdgeInsets.only(right: 20, top: 10);
+  static EdgeInsets suggestionsMargin = EdgeInsets.only(
+    right: 10,
+    top: 3,
+  );
 }
 
 class PaddingUtility {
-  static EdgeInsets textPading = EdgeInsets.symmetric(horizontal: 18);
-  static EdgeInsets coffeNamePading = EdgeInsets.symmetric(vertical: 18);
+  static EdgeInsets textPading = EdgeInsets.symmetric(horizontal: 8);
+  static EdgeInsets coffeNamePading = EdgeInsets.only(top: 10);
   static EdgeInsets listviewPadding = EdgeInsets.symmetric(horizontal: 20);
   static const EdgeInsets paddingOnly = EdgeInsets.only(left: 191, top: 70);
   static const EdgeInsets paddingonlyTab = EdgeInsets.only(top: 350, left: 200);

@@ -124,26 +124,33 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
           body: Row(
         children: [
-          Column(
-            children: [
-              ColumnImage(
-                child: ListView(
-                    physics: NeverScrollableScrollPhysics(),
-                    children: List.generate(
-                      // growable: false,
-                      7,
-                      (index) => containerImage(index),
-                    )),
-              ),
-            ],
+          Expanded(
+            flex: 1,
+            child: Column(
+              children: [
+                ColumnImage(
+                  child: ListView(
+                      clipBehavior: Clip.hardEdge,
+                      physics: NeverScrollableScrollPhysics(),
+                      children: List.generate(
+                        // growable: false,
+                        7,
+                        (index) => containerImage(index),
+                      )),
+                ),
+              ],
+            ),
           ),
-          Column(
-            children: [
-              customText(),
-              IngredientSelection(),
-              CustomButton(buttonBox: buttonBox),
-              customTextBox(),
-            ],
+          Expanded(
+            flex: 2,
+            child: Column(
+              children: [
+                customText(),
+                IngredientSelection(),
+                CustomButton(buttonBox: buttonBox),
+                customTextBox(),
+              ],
+            ),
           )
         ],
       )),

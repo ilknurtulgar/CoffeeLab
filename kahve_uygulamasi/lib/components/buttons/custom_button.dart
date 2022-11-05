@@ -20,7 +20,6 @@ class _CustomButtonState extends State<CustomButton> {
             decoration: BoxDecoration(
                 borderRadius: widget.buttonBox.borderRadius,
                 color: widget.buttonBox.color),
-            color: widget.buttonBox.color,
             child: Center(
               child: Text(widget.buttonBox.text ?? "",
                   style: widget.buttonBox.textStyle),

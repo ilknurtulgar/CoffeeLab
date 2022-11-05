@@ -179,7 +179,7 @@ class CoffeeInformationModelUtility {
       coffeeName: "con panna",
       coffeeImagAsset: ImageUtility.conPannaAsset,
       coffeeInformation: CoffeDefinitions.conPanna);
-  //bura
+
   CoffeeInformationModel frappeIM = CoffeeInformationModel(
       coffeeName: "Frappe",
       coffeeImagAsset: ImageUtility.frappe,
@@ -217,15 +217,15 @@ class CoffeeViewModelUtility extends CoffeeInformationModelUtility {
         caramelMacchiatoIM
       ]);
   late CoffeeViewModel cappucinoVM = CoffeeViewModel(
-    coffee: frappeIM,
+    coffee: cappucinoIM,
     suggestions: [latteIM, macchiatoIM, flatWhiteIM],
   );
   late CoffeeViewModel flatWhiteVM = CoffeeViewModel(
-    coffee: frappeIM,
+    coffee: flatWhiteIM,
     suggestions: [cappucinoIM, macchiatoIM, espressoIM],
   );
   late CoffeeViewModel turkKahvesiVM = CoffeeViewModel(
-    coffee: frappeIM,
+    coffee: turkKahvesiIM,
     suggestions: [iceAmericanoIM, espressoIM],
   );
   late CoffeeViewModel iceLatteVM = CoffeeViewModel(
@@ -241,7 +241,7 @@ class CoffeeViewModelUtility extends CoffeeInformationModelUtility {
     suggestions: [whiteChocolateMochaIM, caramelMacchiatoIM, latteIM],
   );
   late CoffeeViewModel conPannaVM = CoffeeViewModel(
-    coffee: caramelMacchiatoIM,
+    coffee: conpannaIM,
     suggestions: [latteIM, cappucinoIM, macchiatoIM, flatWhiteIM],
   );
   late CoffeeViewModel iceAmericanoVM = CoffeeViewModel(
