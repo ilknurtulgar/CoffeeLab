@@ -6,14 +6,13 @@ import 'package:kahve_uygulamasi/product/page3/page3view.dart';
 import 'buttons/custom_row_with_buttons.dart';
 
 class IngredientSelection extends StatefulWidget {
-  IngredientSelection({Key? key}) : super(key: key);
-
+  IngredientSelection({Key? key, required this.kahve}) : super(key: key);
+  Coffee kahve;
   @override
   State<IngredientSelection> createState() => _IngredientSelectionState();
 }
 
 class _IngredientSelectionState extends State<IngredientSelection> {
-  Coffee kahve = Coffee();
   CoffeeViewModelUtility coffee_utility = CoffeeViewModelUtility();
   List<String> ingredientName = [
     'süt',
@@ -25,77 +24,75 @@ class _IngredientSelectionState extends State<IngredientSelection> {
     'karamel'
   ];
   late List<bool?> ingredients = [
-    kahve.sut,
-    kahve.buz,
-    kahve.seker,
-    kahve.krema,
-    kahve.sutluCikolata,
-    kahve.beyazCikolata,
-    kahve.karamel
+    widget.kahve.sut,
+    widget.kahve.buz,
+    widget.kahve.seker,
+    widget.kahve.krema,
+    widget.kahve.sutluCikolata,
+    widget.kahve.beyazCikolata,
+    widget.kahve.karamel
   ];
   late List<Function> callbackFunctions = [
     (bool upIngredient) {
       setState(() {
-        kahve.sut = upIngredient;
+        widget.kahve.sut = upIngredient;
       });
     },
     (bool upIngredient) {
       setState(() {
-        kahve.buz = upIngredient;
+        widget.kahve.buz = upIngredient;
       });
     },
     (bool upIngredient) {
       setState(() {
-        kahve.seker = upIngredient;
+        widget.kahve.seker = upIngredient;
       });
     },
     (bool upIngredient) {
       setState(() {
-        kahve.krema = upIngredient;
+        widget.kahve.krema = upIngredient;
       });
     },
     (bool upIngredient) {
       setState(() {
-        kahve.sutluCikolata = upIngredient;
+        widget.kahve.sutluCikolata = upIngredient;
       });
     },
     (bool upIngredient) {
       setState(() {
-        kahve.beyazCikolata = upIngredient;
+        widget.kahve.beyazCikolata = upIngredient;
       });
     },
     (bool upIngredient) {
       setState(() {
-        kahve.karamel = upIngredient;
+        widget.kahve.karamel = upIngredient;
       });
     },
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Container(
-              height: 411,
-              width: 191,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Color.fromARGB(255, 202, 143, 122)),
-              child: Center(
-                child: Column(mainAxisSize: MainAxisSize.min, children: [
-                  VerticalTextRow(),
-                  ListView.builder(
-                    itemCount: 7,
-                    itemBuilder: (context, index) => CustomRowWithButtons(
-                        coffeeIngredient: ingredients[index],
-                        coffeeIngredientName: ingredientName[index],
-                        callbackFunction: callbackFunctions[index]),
-                    shrinkWrap: true,
-                  )
-                ]),
-              )),
-        ],
-      ),
+    return Column(
+      children: [
+        Container(
+            height: 411,
+            width: 191,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: Color.fromARGB(255, 202, 143, 122)),
+            child: Center(
+              child: Column(mainAxisSize: MainAxisSize.min, children: [
+                VerticalTextRow(),
+                ListView.builder(
+                  itemCount: 7,
+                  itemBuilder: (context, index) => CustomRowWithButtons(
+                      coffeeIngredient: ingredients[index],
+                      coffeeIngredientName: ingredientName[index],
+                      callbackFunction: callbackFunctions[index]),
+                  shrinkWrap: true,
+                )
+              ]),
+            )),
+      ],
     );
   }
 }
