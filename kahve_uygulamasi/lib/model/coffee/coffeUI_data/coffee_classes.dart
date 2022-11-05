@@ -19,19 +19,19 @@ class Coffee {
   });
 }
 
-class CoffeeCD {
+class CoffeeInformationModel {
   String coffeeName;
   String coffeeImagAsset;
   String coffeeInformation;
-  CoffeeCD(
+  CoffeeInformationModel(
       {required this.coffeeName,
       required this.coffeeImagAsset,
       required this.coffeeInformation});
 }
 
 class CoffeeViewModel {
-  List<CoffeeCD> suggestions = [];
-  CoffeeCD coffee;
+  List<CoffeeInformationModel> suggestions = [];
+  CoffeeInformationModel coffee;
   CoffeeViewModel({
     required this.coffee,
     required this.suggestions,
@@ -146,62 +146,62 @@ class CoffeeRecipe {
       karamel: false); //
 }
 
-class CoffeeCDUtility {
-  CoffeeCD caramelMacchiatoCD = CoffeeCD(
+class CoffeeInformaitonModelUtility {
+  CoffeeInformationModel caramelMacchiatoIM = CoffeeInformationModel(
       coffeeName: 'caramel macchiato',
       coffeeImagAsset: ImageUtility.caramelMacchiatoAsset,
       coffeeInformation: CoffeDefinitions.caramelMacchiato);
-  CoffeeCD sicakLatteCD = CoffeeCD(
+  CoffeeInformationModel sicakLatteIM = CoffeeInformationModel(
       coffeeName: 'sıcak latte',
       coffeeImagAsset: ImageUtility.latteAsset,
       coffeeInformation: CoffeDefinitions.latte);
-  CoffeeCD mochaCD = CoffeeCD(
+  CoffeeInformationModel mochaIM = CoffeeInformationModel(
       coffeeName: 'mocha',
       coffeeImagAsset: ImageUtility.mochaAsset,
       coffeeInformation: CoffeDefinitions.mocha);
-  CoffeeCD iceAmericanoCD = CoffeeCD(
+  CoffeeInformationModel iceAmericanoIM = CoffeeInformationModel(
       coffeeName: 'ice americano',
       coffeeImagAsset: ImageUtility.iceAmericanoAsset,
       coffeeInformation: CoffeDefinitions.iceAmericano);
-  CoffeeCD macchiatoCD = CoffeeCD(
+  CoffeeInformationModel macchiatoIM = CoffeeInformationModel(
       coffeeName: "macchiato",
       coffeeImagAsset: ImageUtility.macchiatoAsset,
       coffeeInformation: CoffeDefinitions.macchiato);
-  CoffeeCD whiteChoMochaCD = CoffeeCD(
+  CoffeeInformationModel whiteChoMochaIM = CoffeeInformationModel(
       coffeeName: "white  chocolate  mocha",
       coffeeImagAsset: ImageUtility.whiteChocolateMochaAsset,
       coffeeInformation: CoffeDefinitions.whiteChocolateMocha);
-  CoffeeCD conpannaCD = CoffeeCD(
+  CoffeeInformationModel conpannaIM = CoffeeInformationModel(
       coffeeName: "con panna",
       coffeeImagAsset: ImageUtility.conPannaAsset,
       coffeeInformation: CoffeDefinitions.conPanna);
   //bura
-  CoffeeCD frappeCD = CoffeeCD(
+  CoffeeInformationModel frappeIM = CoffeeInformationModel(
       coffeeName: "Frappe",
       coffeeImagAsset: ImageUtility.frappe,
       coffeeInformation: CoffeDefinitions.frappe);
-  CoffeeCD cappucinoCD = CoffeeCD(
+  CoffeeInformationModel cappucinoIM = CoffeeInformationModel(
       coffeeName: "Cappucino",
       coffeeImagAsset: ImageUtility.cappucinoAsset,
       coffeeInformation: CoffeDefinitions.cappucino);
-  CoffeeCD flatwhiteCd = CoffeeCD(
+  CoffeeInformationModel flatwhiteIM = CoffeeInformationModel(
       coffeeName: "Flat white",
       coffeeImagAsset: ImageUtility.flatWhiteAsset,
       coffeeInformation: CoffeDefinitions.flatWhite);
-  CoffeeCD turkKahvesiCd = CoffeeCD(
+  CoffeeInformationModel turkKahvesiIM = CoffeeInformationModel(
       coffeeName: "Türk Kahvesi",
       coffeeImagAsset: ImageUtility.cappucinoAsset,
       coffeeInformation: CoffeDefinitions.turkKahvesi);
-  CoffeeCD espressoCd = CoffeeCD(
+  CoffeeInformationModel espressoIM = CoffeeInformationModel(
       coffeeName: "Espresso",
       coffeeImagAsset: ImageUtility.espressoAsset,
       coffeeInformation: CoffeDefinitions.espresso);
 }
 
-class CoffeeUtility extends CoffeeCDUtility {
+class CoffeeUtility extends CoffeeInformaitonModelUtility {
   late CoffeeViewModel caramelMacchiatoS = CoffeeViewModel(
-    coffee: caramelMacchiatoCD,
-    suggestions: [mochaCD, sicakLatteCD, iceAmericanoCD],
+    coffee: caramelMacchiatoIM,
+    suggestions: [mochaIM, sicakLatteIM, iceAmericanoIM],
   );
 }
 
