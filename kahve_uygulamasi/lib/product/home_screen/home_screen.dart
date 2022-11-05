@@ -130,42 +130,71 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Expanded(
             flex: 1,
-            child: ColumnImage(
-              child: ListView(
-                  physics: NeverScrollableScrollPhysics(),
-                  children: List.generate(
-                    imageUi.length,
-                    (index) => containerImage(index),
-                  )),
-            ),
+            child: _columnImage(),
           ),
           Expanded(
             flex: 2,
             child: Center(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  customText(),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  IngredientSelection(
-                    kahve: kahve,
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  CustomButton(buttonBox: buttonBox),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  customTextBox(),
-                ],
-              ),
+              child: ColumnCustomView(kahve: kahve, buttonBox: buttonBox),
             ),
           )
         ],
       )),
     );
   }
+
+  ColumnImage _columnImage() {
+    return ColumnImage(
+      child: ListView(
+          physics: NeverScrollableScrollPhysics(),
+          children: List.generate(
+            imageUi.length,
+            (index) => containerImage(index),
+          )),
+    );
+  }
+}
+
+class ColumnCustomView extends StatefulWidget {
+  const ColumnCustomView({
+    Key? key,
+    required this.kahve,
+    required this.buttonBox,
+  }) : super(key: key);
+
+  final Coffee kahve;
+  final ButtonBox buttonBox;
+
+  @override
+  State<ColumnCustomView> createState() => _ColumnCustomViewState();
+}
+
+class _ColumnCustomViewState extends State<ColumnCustomView> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: Projectutility.mainAxisSize,
+      children: [
+        customText(),
+        SizedBox(
+          height: 5,
+        ),
+        IngredientSelection(
+          kahve: widget.kahve,
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        CustomButton(buttonBox: widget.buttonBox),
+        SizedBox(
+          height: 5,
+        ),
+        customTextBox(),
+      ],
+    );
+  }
+}
+
+class Projectutility {
+  static MainAxisSize mainAxisSize = MainAxisSize.min;
 }
