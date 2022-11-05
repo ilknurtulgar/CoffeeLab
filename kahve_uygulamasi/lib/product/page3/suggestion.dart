@@ -26,7 +26,8 @@ Widget Suggestion(String imagePath, String coffeName) {
             AppMargin.suggestionsMargin,
             TextStyleView.fontSizeSuggestion,
             AppComponentSizes.scroll_height,
-            AlignUtility.start),
+            AlignUtility.start,
+            TextStyleView.fontWeightPage3),
       )
     ],
   );

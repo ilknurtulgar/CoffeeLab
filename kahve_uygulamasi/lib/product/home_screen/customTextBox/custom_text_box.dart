@@ -17,6 +17,7 @@ CustomText customTextBox() {
       height: 110,
       text1: randomtext[Random().nextInt(6)],
       width: 180);
+
 }
 
 CustomText customText() {
@@ -28,4 +29,6 @@ CustomText customText() {
       height: 50,
       text1: "KAHVENDE NELER OLSUN?",
       width: 210);
+
+
 }

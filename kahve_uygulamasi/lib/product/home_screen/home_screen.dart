@@ -132,6 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     imageUi.length,
                     (index) => containerImage(index),
                   )),
+
             ),
           ),
           Expanded(
@@ -157,6 +158,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   customTextBox(),
                 ],
               ),
+
             ),
           )
         ],

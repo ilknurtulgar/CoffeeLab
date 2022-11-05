@@ -148,35 +148,35 @@ class CoffeeRecipe {
 
 class CoffeeInformationModelUtility {
   CoffeeInformationModel caramelMacchiatoIM = CoffeeInformationModel(
-      coffeeName: 'caramel macchiato',
+      coffeeName: 'Caramel Macchiato',
       coffeeImagAsset: ImageUtility.caramelMacchiatoAsset,
       coffeeInformation: CoffeDefinitions.caramelMacchiato);
   CoffeeInformationModel latteIM = CoffeeInformationModel(
-      coffeeName: 'latte',
+      coffeeName: 'Latte',
       coffeeImagAsset: ImageUtility.latteAsset,
       coffeeInformation: CoffeDefinitions.latte);
   CoffeeInformationModel iceLatteIM = CoffeeInformationModel(
-      coffeeName: 'ice latte',
+      coffeeName: 'Ice Latte',
       coffeeImagAsset: ImageUtility.iceLatteAsset,
       coffeeInformation: CoffeDefinitions.iceLatte);
   CoffeeInformationModel mochaIM = CoffeeInformationModel(
-      coffeeName: 'mocha',
+      coffeeName: 'Mocha',
       coffeeImagAsset: ImageUtility.mochaAsset,
       coffeeInformation: CoffeDefinitions.mocha);
   CoffeeInformationModel iceAmericanoIM = CoffeeInformationModel(
-      coffeeName: 'ice americano',
+      coffeeName: 'Ice Americano',
       coffeeImagAsset: ImageUtility.iceAmericanoAsset,
       coffeeInformation: CoffeDefinitions.iceAmericano);
   CoffeeInformationModel macchiatoIM = CoffeeInformationModel(
-      coffeeName: "macchiato",
+      coffeeName: "Macchiato",
       coffeeImagAsset: ImageUtility.macchiatoAsset,
       coffeeInformation: CoffeDefinitions.macchiato);
   CoffeeInformationModel whiteChocolateMochaIM = CoffeeInformationModel(
-      coffeeName: "white  chocolate  mocha",
+      coffeeName: "White Chocolate Mocha",
       coffeeImagAsset: ImageUtility.whiteChocolateMochaAsset,
       coffeeInformation: CoffeDefinitions.whiteChocolateMocha);
   CoffeeInformationModel conpannaIM = CoffeeInformationModel(
-      coffeeName: "con panna",
+      coffeeName: "Con Panna",
       coffeeImagAsset: ImageUtility.conPannaAsset,
       coffeeInformation: CoffeDefinitions.conPanna);
   CoffeeInformationModel frappeIM = CoffeeInformationModel(

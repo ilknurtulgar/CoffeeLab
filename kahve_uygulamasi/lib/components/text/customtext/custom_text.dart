@@ -42,6 +42,7 @@ class _CustomTextState extends State<CustomText> {
           child: TextView(widget.text1, widget.textStyle),
         ),
       ),
+
       width: widget.width,
       height: widget.height,
       decoration: BoxDecoration(

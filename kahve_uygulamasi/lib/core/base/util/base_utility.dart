@@ -37,7 +37,8 @@ class PaddingUtility {
   static EdgeInsets coffeNamePading = EdgeInsets.only(top: 10);
   static EdgeInsets listviewPadding = EdgeInsets.symmetric(horizontal: 20);
   static const EdgeInsets paddingOnly = EdgeInsets.only(left: 191, top: 70);
-  static const EdgeInsets paddingonlyTab = EdgeInsets.only(top: 350, left: 200);
+  static const EdgeInsets paddingonlyTab =
+      EdgeInsets.only(top: 350, left: 150, right: 150);
   static const EdgeInsets paddingImage = EdgeInsets.only(left: 19, right: 19);
 }
 
@@ -65,7 +66,7 @@ class AppRadius {
 
 class MainPositioned {
   static double left = 64;
-  static double topx =40;
+  static double topx = 40;
   static double right = 60;
   static double top2x = 150;
 }
@@ -73,7 +74,7 @@ class MainPositioned {
 class TextStyleView {
   static String fontFamily = "Amiri";
   static String fontFamilyPoppins = "Poppins";
-  static double fontSizePage3 = 32;
+  static double fontSizePage3 = 25;
   static double fontSizeSuggestion = 16;
   static double fontSize = 50;
   static FontWeight fontWeight = FontWeight.w700;
