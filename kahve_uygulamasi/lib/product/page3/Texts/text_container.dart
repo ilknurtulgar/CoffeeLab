@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/base/util/base_utility.dart';
-import '../../../model/coffeUI_data/coffe_definitions.dart';
+import '../../../model/coffee/coffeUI_data/coffe_definitions.dart';
 import 'custom_text.dart';
 
 Container TextContainer(String txt1, String txt2) {

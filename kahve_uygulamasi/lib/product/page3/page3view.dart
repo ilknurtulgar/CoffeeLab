@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:kahve_uygulamasi/product/page3/Texts/custom_text.dart';
-
-import 'package:kahve_uygulamasi/model/coffee_classes.dart';
+import 'package:kahve_uygulamasi/model/coffee/coffeUI_data/coffee_classes.dart';
 
 import '../../core/base/util/base_utility.dart';
 

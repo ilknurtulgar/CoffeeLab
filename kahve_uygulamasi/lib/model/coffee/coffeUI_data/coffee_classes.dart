@@ -141,7 +141,68 @@ class CoffeeRecipe {
       karamel: false); //
 }
 
-class CoffeeUtility extends CoffeeRecipe {
+class CoffeeCD {
+  String coffeeName;
+  String coffeeImagAsset;
+  String coffeeInformation;
+  CoffeeCD(
+      {required this.coffeeName,
+      required this.coffeeImagAsset,
+      required this.coffeeInformation});
+}
+
+class CoffeeCDUtility {
+  CoffeeCD caramelMacchiatoCD = CoffeeCD(
+      coffeeName: 'caramel macchiato',
+      coffeeImagAsset: ImageUtility.caramelMacchiatoAsset,
+      coffeeInformation: CoffeDefinitions.caramelMacchiato);
+  CoffeeCD sicakLatteCD = CoffeeCD(
+      coffeeName: 'sıcak latte',
+      coffeeImagAsset: ImageUtility.latteAsset,
+      coffeeInformation: CoffeDefinitions.latte);
+  CoffeeCD mochaCD = CoffeeCD(
+      coffeeName: 'mocha',
+      coffeeImagAsset: ImageUtility.mochaAsset,
+      coffeeInformation: CoffeDefinitions.mocha);
+  CoffeeCD iceAmericanoCD = CoffeeCD(
+      coffeeName: 'ice americano',
+      coffeeImagAsset: ImageUtility.iceAmericanoAsset,
+      coffeeInformation: CoffeDefinitions.iceAmericano);
+  CoffeeCD macchiatoCD = CoffeeCD(
+      coffeeName: "macchiato",
+      coffeeImagAsset: ImageUtility.macchiatoAsset,
+      coffeeInformation: CoffeDefinitions.macchiato);
+  CoffeeCD whiteChoMochaCD = CoffeeCD(
+      coffeeName: "white  chocolate  mocha",
+      coffeeImagAsset: ImageUtility.whiteChocolateMochaAsset,
+      coffeeInformation: CoffeDefinitions.whiteChocolateMocha);
+  CoffeeCD conpannaCD = CoffeeCD(
+      coffeeName: "con panna",
+      coffeeImagAsset: ImageUtility.conPannaAsset,
+      coffeeInformation: CoffeDefinitions.conPanna);
+  CoffeeCD frappeCD = CoffeeCD(
+      coffeeName: "Frappe",
+      coffeeImagAsset: ImageUtility.frappe,
+      coffeeInformation: CoffeDefinitions.frappe);
+  CoffeeCD cappucinoCD = CoffeeCD(
+      coffeeName: "Cappucino",
+      coffeeImagAsset: ImageUtility.cappucinoAsset,
+      coffeeInformation: CoffeDefinitions.cappucino);
+  CoffeeCD flatwhiteCd = CoffeeCD(
+      coffeeName: "Flat white",
+      coffeeImagAsset: ImageUtility.flatWhiteAsset,
+      coffeeInformation: CoffeDefinitions.flatWhite);
+  CoffeeCD turkKahvesiCd = CoffeeCD(
+      coffeeName: "Türk Kahvesi",
+      coffeeImagAsset: ImageUtility.cappucinoAsset,
+      coffeeInformation: CoffeDefinitions.turkKahvesi);
+  CoffeeCD espressoCd = CoffeeCD(
+      coffeeName: "Espresso",
+      coffeeImagAsset: ImageUtility.espressoAsset,
+      coffeeInformation: CoffeDefinitions.espresso);
+}
+
+/*class CoffeeUtility extends CoffeeRecipe {
   late CoffeeViewModel caramelMacchiatoS = CoffeeViewModel(
     coffee: caramelMacchiato,
     suggestions: [frappeS, mochaS, whiteChocolateMochaS, conPannaS],
@@ -238,7 +299,7 @@ class CoffeeUtility extends CoffeeRecipe {
       coffeeInformation: CoffeDefinitions.espresso,
       coffeeImagePath: ImageUtility.espressoAsset);
 }
-
+*/
 class CoffeDefinitions {
   static String conPanna =
       " Tek chot espresso üzerine çırpılmış krema ile hazırlanan kahve çeşidi.";
