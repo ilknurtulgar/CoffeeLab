@@ -179,7 +179,6 @@ class CoffeeInformationModelUtility {
       coffeeName: "con panna",
       coffeeImagAsset: ImageUtility.conPannaAsset,
       coffeeInformation: CoffeDefinitions.conPanna);
-
   CoffeeInformationModel frappeIM = CoffeeInformationModel(
       coffeeName: "Frappe",
       coffeeImagAsset: ImageUtility.frappe,
