@@ -9,6 +9,7 @@ class AppColor {
   static Color tacao = Color(0xFFEDBD90);
   static Color mineShaft = Color(0xFF333333);
   static Color merino = Color(0xFFF4ECE4);
+  static Color transparent = Colors.transparent;
 }
 
 class AppComponentSizes {

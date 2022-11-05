@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
+import 'package:kahve_uygulamasi/product/home_screen/vertical_text_row.dart';
 
 class CustomRowWithButtons extends StatefulWidget {
   CustomRowWithButtons({
@@ -19,12 +21,14 @@ class _CustomRowWithButtonsState extends State<CustomRowWithButtons> {
   int i = 0;
   @override
   Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+    return Row(
+     mainAxisAlignment: IngredientChoosingUtility.alignment,
+     children: [
       Padding(
-        padding: EdgeInsets.only(left: 10),
+        padding: IngredientChoosingUtility.informationTitlePadding,
         child: Text(
           widget.coffeeIngredientName,
-          style: const TextStyle(color: Colors.black, fontSize: 12),
+          style: buttonTextStyle(),
         ),
       ),
       _toggleButtons(),
@@ -48,25 +52,22 @@ class _CustomRowWithButtonsState extends State<CustomRowWithButtons> {
         });
       }),
       isSelected: isSelected,
-      color: Colors.black,
-      borderColor: Colors.transparent,
-      selectedColor:
-          Colors.white, //bunun rengi de değişebilir şimdilik beyaz yaptım
-      selectedBorderColor: Colors.transparent,
-      fillColor: Colors.transparent,
-      splashColor: Colors.transparent,
+      color: AppColor.black,
+      borderColor: AppColor.transparent,
+      selectedColor:AppColor.white,
+      selectedBorderColor:AppColor.transparent,
+      fillColor: AppColor.transparent,
+      splashColor: AppColor.transparent,
       children: IconView,
     );
   }
 
   List<Widget> get IconView {
     return <Widget>[
-      IconBar.iconcheck,
-      IconBar.iconcheck,
+      IngredientChoosingUtility.checkIcon,
+      IngredientChoosingUtility.checkIcon,
     ];
   }
 }
 
-class IconBar {
-  static Icon iconcheck = Icon(Icons.check_circle_outline);
-}
+

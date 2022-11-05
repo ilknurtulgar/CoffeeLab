@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
 
 class VerticalTextRow extends StatelessWidget {
   const VerticalTextRow({Key? key}) : super(key: key);
@@ -6,25 +7,48 @@ class VerticalTextRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: IngredientChoosingUtility.alignment,
       children: [
-        const Padding(
-          padding: EdgeInsets.only(left: 10.0),
-          child: RotatedBox(quarterTurns: 3, child: Text('içerik',style: TextStyle(fontSize: 16),)),
-        ),
+        RotatedText(Titles.informationTitle,
+            IngredientChoosingUtility.informationTitlePadding),
         Row(
           children: [
-            RotatedBox(quarterTurns: 3, child: Text('olsun',style: TextStyle(fontSize: 16),)),
+            RotatedText(Titles.trueCheckTitle,
+                IngredientChoosingUtility.trueCheckTitlePadding),
             const SizedBox(
               width: 33,
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 19.0),
-              child: RotatedBox(quarterTurns: 3, child: Text('olmasın',style: TextStyle(fontSize: 16),)),
-            ),
+            RotatedText(Titles.falseCheckTitle,
+                IngredientChoosingUtility.falseCheckTitlePadding),
           ],
         ),
       ],
     );
   }
+
+  Padding RotatedText(String title, EdgeInsets titlePadding) {
+    return Padding(
+      padding: EdgeInsets.only(left: 10.0),
+      child: RotatedBox(
+          quarterTurns: 3,
+          child: Text(
+            'içerik',
+            style: buttonTextStyle(),
+          )),
+    );
+  }
+}
+
+class Titles {
+  static String informationTitle = 'içerik';
+  static String trueCheckTitle = 'içerik';
+  static String falseCheckTitle = 'içerik';
+}
+
+class IngredientChoosingUtility {
+  static EdgeInsets informationTitlePadding = EdgeInsets.only(left: 10.0);
+  static EdgeInsets trueCheckTitlePadding = EdgeInsets.zero;
+  static EdgeInsets falseCheckTitlePadding = EdgeInsets.only(right: 19.0);
+  static MainAxisAlignment alignment = MainAxisAlignment.spaceBetween;
+  static Icon checkIcon = Icon(Icons.check_circle_outline);
 }
