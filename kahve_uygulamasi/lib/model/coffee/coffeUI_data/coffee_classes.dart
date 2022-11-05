@@ -151,7 +151,7 @@ class CoffeeInformationModelUtility {
       coffeeName: 'caramel macchiato',
       coffeeImagAsset: ImageUtility.caramelMacchiatoAsset,
       coffeeInformation: CoffeDefinitions.caramelMacchiato);
-  CoffeeInformationModel sicakLatteIM = CoffeeInformationModel(
+  CoffeeInformationModel latteIM = CoffeeInformationModel(
       coffeeName: 'latte',
       coffeeImagAsset: ImageUtility.latteAsset,
       coffeeInformation: CoffeDefinitions.latte);
@@ -171,7 +171,7 @@ class CoffeeInformationModelUtility {
       coffeeName: "macchiato",
       coffeeImagAsset: ImageUtility.macchiatoAsset,
       coffeeInformation: CoffeDefinitions.macchiato);
-  CoffeeInformationModel whiteChoMochaIM = CoffeeInformationModel(
+  CoffeeInformationModel whiteChocolateMochaIM = CoffeeInformationModel(
       coffeeName: "white  chocolate  mocha",
       coffeeImagAsset: ImageUtility.whiteChocolateMochaAsset,
       coffeeInformation: CoffeDefinitions.whiteChocolateMocha);
@@ -188,7 +188,7 @@ class CoffeeInformationModelUtility {
       coffeeName: "Cappucino",
       coffeeImagAsset: ImageUtility.cappucinoAsset,
       coffeeInformation: CoffeDefinitions.cappucino);
-  CoffeeInformationModel flatwhiteIM = CoffeeInformationModel(
+  CoffeeInformationModel flatWhiteIM = CoffeeInformationModel(
       coffeeName: "Flat white",
       coffeeImagAsset: ImageUtility.flatWhiteAsset,
       coffeeInformation: CoffeDefinitions.flatWhite);
@@ -205,22 +205,26 @@ class CoffeeInformationModelUtility {
 class CoffeeViewModelUtility extends CoffeeInformationModelUtility {
   late CoffeeViewModel caramelMacchiatoVM = CoffeeViewModel(
     coffee: caramelMacchiatoIM,
-    suggestions: [mochaIM, sicakLatteIM, iceAmericanoIM],
+    suggestions: [mochaIM,latteIM, iceAmericanoIM],
   );
   late CoffeeViewModel frappeVM=CoffeeViewModel(
     coffee: frappeIM,suggestions: [iceLatteIM,mochaIM,whiteChocolateMochaIM,frappeIM,caramelMacchiatoIM]
   );
   late CoffeeViewModel cappucinoVM=CoffeeViewModel(
-    coffee: frappeIM,suggestions: [sicakLatteIM, macchiatoIM, flatwhiteIM],
+    coffee: frappeIM,suggestions: [latteIM, macchiatoIM, flatWhiteIM],
   );
-  late CoffeeViewModel frappeVM=CoffeeViewModel(
-    coffee: frappeIM,suggestions: [iceLatteIM,mochaIM,whiteChocolateMochaIM,frappeIM,caramelMacchiatoIM]
+  late CoffeeViewModel flatWhiteVM=CoffeeViewModel(
+    coffee: frappeIM,suggestions: [cappucinoIM, macchiatoIM, espressoIM],
   );
-  late CoffeeViewModel frappeVM=CoffeeViewModel(
-    coffee: frappeIM,suggestions: [iceLatteIM,mochaIM,whiteChocolateMochaIM,frappeIM,caramelMacchiatoIM]
+  late CoffeeViewModel turkKahvesiVM=CoffeeViewModel(
+    coffee: frappeIM,suggestions: [iceAmericanoIM, espressoIM],
   );
-  late CoffeeViewModel frappeVM=CoffeeViewModel(
-    coffee: frappeIM,suggestions: [iceLatteIM,mochaIM,whiteChocolateMochaIM,frappeIM,caramelMacchiatoIM]
+  late CoffeeViewModel iceLatteVM=CoffeeViewModel(
+    coffee: iceLatteIM,
+    suggestions: [mochaIM, whiteChocolateMochaIM, caramelMacchiatoIM],);
+  late CoffeeViewModel latteVM=CoffeeViewModel(
+    coffee:latteIM,
+    suggestions: [mochaIM, whiteChocolateMochaIM, caramelMacchiatoIM],
   );
 }
 
