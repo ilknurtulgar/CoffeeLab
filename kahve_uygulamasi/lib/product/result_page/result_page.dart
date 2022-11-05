@@ -7,8 +7,8 @@ import 'Texts/text_container.dart';
 import 'custom_image.dart';
 import 'suggestion.dart';
 
-class Page3View extends StatelessWidget {
-  const Page3View({super.key, required this.coffeData});
+class ResultPageScreen extends StatelessWidget {
+  const ResultPageScreen({super.key, required this.coffeData});
   final CoffeeViewModel coffeData;
 
   @override

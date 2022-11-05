@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => Page3View(coffeData: coffeeData),
+          builder: (context) => ResultPageScreen(coffeData: coffeeData),
         ));
   }
 
