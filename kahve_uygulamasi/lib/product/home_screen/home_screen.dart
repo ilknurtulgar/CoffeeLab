@@ -9,7 +9,7 @@ import '../../core/base/util/ingredient_selection_utility.dart';
 import '../../model/coffee/coffeUI_data/coffee_uidata_model_utility.dart';
 import '../../model/coffee/coffee_view_model/coffee_models.dart';
 import '../../model/custom_text_view.dart';
-import '../page3/page3view.dart';
+import '../result_page/result_page.dart';
 import 'column_image_box.dart/column_image_box.dart';
 import 'customTextBox/custom_text_box.dart';
 
