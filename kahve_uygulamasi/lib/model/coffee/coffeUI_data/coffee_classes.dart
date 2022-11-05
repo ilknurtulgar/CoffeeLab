@@ -19,18 +19,23 @@ class Coffee {
   });
 }
 
-class CoffeeViewModel {
-  Coffee coffee;
-  List<CoffeeViewModel> suggestions = [];
+class CoffeeCD {
   String coffeeName;
+  String coffeeImagAsset;
   String coffeeInformation;
-  String coffeeImagePath;
-  CoffeeViewModel(
-      {required this.coffee,
-      required this.suggestions,
-      required this.coffeeName,
-      required this.coffeeInformation,
-      required this.coffeeImagePath});
+  CoffeeCD(
+      {required this.coffeeName,
+      required this.coffeeImagAsset,
+      required this.coffeeInformation});
+}
+
+class CoffeeViewModel {
+  List<CoffeeCD> suggestions = [];
+  CoffeeCD coffee;
+  CoffeeViewModel({
+    required this.coffee,
+    required this.suggestions,
+  });
 }
 
 class CoffeeRecipe {
@@ -141,16 +146,6 @@ class CoffeeRecipe {
       karamel: false); //
 }
 
-class CoffeeCD {
-  String coffeeName;
-  String coffeeImagAsset;
-  String coffeeInformation;
-  CoffeeCD(
-      {required this.coffeeName,
-      required this.coffeeImagAsset,
-      required this.coffeeInformation});
-}
-
 class CoffeeCDUtility {
   CoffeeCD caramelMacchiatoCD = CoffeeCD(
       coffeeName: 'caramel macchiato',
@@ -180,6 +175,7 @@ class CoffeeCDUtility {
       coffeeName: "con panna",
       coffeeImagAsset: ImageUtility.conPannaAsset,
       coffeeInformation: CoffeDefinitions.conPanna);
+  //bura
   CoffeeCD frappeCD = CoffeeCD(
       coffeeName: "Frappe",
       coffeeImagAsset: ImageUtility.frappe,
@@ -202,7 +198,15 @@ class CoffeeCDUtility {
       coffeeInformation: CoffeDefinitions.espresso);
 }
 
-/*class CoffeeUtility extends CoffeeRecipe {
+class CoffeeUtility extends CoffeeCDUtility {
+  late CoffeeViewModel caramelMacchiatoS = CoffeeViewModel(
+    coffee: caramelMacchiatoCD,
+    suggestions: [mochaCD, sicakLatteCD, iceAmericanoCD],
+  );
+}
+
+/*
+class CoffeeUtility extends CoffeeRecipe {
   late CoffeeViewModel caramelMacchiatoS = CoffeeViewModel(
     coffee: caramelMacchiato,
     suggestions: [frappeS, mochaS, whiteChocolateMochaS, conPannaS],
@@ -300,6 +304,7 @@ class CoffeeCDUtility {
       coffeeImagePath: ImageUtility.espressoAsset);
 }
 */
+
 class CoffeDefinitions {
   static String conPanna =
       " Tek chot espresso üzerine çırpılmış krema ile hazırlanan kahve çeşidi.";
