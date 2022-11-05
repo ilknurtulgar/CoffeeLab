@@ -18,6 +18,7 @@ class Coffee {
     this.karamel,
   });
 }
+
 class CoffeeViewModel {
   Coffee coffee;
   List<CoffeeViewModel> suggestions = [];
@@ -31,6 +32,7 @@ class CoffeeViewModel {
       required this.coffeeInformation,
       required this.coffeeImagePath});
 }
+
 class CoffeeRecipe {
   Coffee caramelMacchiato = Coffee(
     sut: true,
@@ -138,6 +140,7 @@ class CoffeeRecipe {
       beyazCikolata: false,
       karamel: false); //
 }
+
 class CoffeeUtility extends CoffeeRecipe {
   late CoffeeViewModel caramelMacchiatoS = CoffeeViewModel(
     coffee: caramelMacchiato,
