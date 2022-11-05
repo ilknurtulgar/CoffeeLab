@@ -7,7 +7,6 @@ class CustomText extends StatefulWidget {
     required this.height,
     required this.width,
     required this.color,
-    required this.padding,
     required this.textStyle,
     required this.borderRadius,
     required this.textAlign,
@@ -22,7 +21,6 @@ class CustomText extends StatefulWidget {
   final double height;
   final double width;
   final Color color;
-  final EdgeInsets padding;
   final TextStyle textStyle;
   final BorderRadius borderRadius;
   final TextAlign textAlign;
@@ -38,12 +36,10 @@ class _CustomTextState extends State<CustomText> {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      child: Column(
-        children: [
-          TextView(widget.text1, widget.textStyle),
-          TextView(widget.text2, widget.textStyle),
-        ],
-      ),
+      child: Column(children: [
+        TextView(widget.text1, widget.textStyle),
+        TextView(widget.text2, widget.textStyle),
+      ]),
       width: widget.width,
       height: widget.height,
       decoration: BoxDecoration(

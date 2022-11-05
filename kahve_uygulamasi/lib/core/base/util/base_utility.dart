@@ -75,7 +75,7 @@ class TextStyleView {
   static String fontFamily = "Amiri";
   static String fontFamilyPoppins = "Poppins";
   static double fontSizePage3 = 32;
-  static double fontSizeSuggestion = 18;
+  static double fontSizeSuggestion = 16;
   static double fontSize = 50;
   static FontWeight fontWeight = FontWeight.w700;
   static FontWeight fontWeightPage3 = FontWeight.w500;

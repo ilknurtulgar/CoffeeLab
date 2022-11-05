@@ -122,26 +122,37 @@ class _HomeScreenState extends State<HomeScreen> {
         SystemUiOverlayStyle(statusBarColor: Colors.black));*/
     return SafeArea(
       child: Scaffold(
-          body: Container(
-        color: Colors.red,
-        child: Row(
-          children: [
-            ColumnImage(
-              child: ListView(
-                  clipBehavior: Clip.hardEdge,
-                  physics: NeverScrollableScrollPhysics(),
-                  children: List.generate(
-                    // growable: false,
-                    7,
-                    (index) => containerImage(index),
-                  )),
+          body: Row(
+        children: [
+          Expanded(
+            flex: 1,
+            child: Column(
+              children: [
+                ColumnImage(
+                  child: ListView(
+                      clipBehavior: Clip.hardEdge,
+                      physics: NeverScrollableScrollPhysics(),
+                      children: List.generate(
+                        // growable: false,
+                        7,
+                        (index) => containerImage(index),
+                      )),
+                ),
+              ],
             ),
-            customText(),
-            IngredientSelection(),
-            CustomButton(buttonBox: buttonBox),
-            customTextBox()
-          ],
-        ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Column(
+              children: [
+                customText(),
+                IngredientSelection(),
+                CustomButton(buttonBox: buttonBox),
+                customTextBox(),
+              ],
+            ),
+          )
+        ],
       )),
     );
   }

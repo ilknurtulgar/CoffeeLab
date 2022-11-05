@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
 import 'package:kahve_uygulamasi/model/coffee/coffeUI_data/coffee_classes.dart';
 import 'package:kahve_uygulamasi/product/home_screen/home_screen.dart';
-//import 'package:kahve_uygulamasi/model/coffee_classes.dart';
-import 'package:kahve_uygulamasi/product/page3/page3view.dart';
-import 'package:kahve_uygulamasi/product/splash_screen/splash_screen.dart';
 
+//import 'package:kahve_uygulamasi/model/coffee_classes.dart';
 void main() {
   runApp(KahveUygulamasi());
 }
@@ -22,9 +20,7 @@ class KahveUygulamasi extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: SafeArea(
-        child: Scaffold(
-          body: HomeScreen(),
-        ),
+        child: Scaffold(body: HomeScreen()),
       ),
     );
   }

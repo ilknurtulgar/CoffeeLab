@@ -11,7 +11,6 @@ CustomText customTextBox() {
   return CustomText(
       borderColor: AppColor.white,
       borderRadius: AppRadius.bordertopRadius,
-      padding: PaddingUtility.paddingonlyTab,
       textAlign: AlignUtility.textAlign,
       textStyle: barTextStyle(),
       color: Color(0xffFBDABC),
@@ -23,7 +22,6 @@ CustomText customTextBox() {
 CustomText customText() {
   return CustomText(
       borderRadius: AppRadius.borderRadius,
-      padding: PaddingUtility.paddingOnly,
       textAlign: AlignUtility.textAlign,
       textStyle: topTextStyle(),
       color: Color(0xffFBDABC),
