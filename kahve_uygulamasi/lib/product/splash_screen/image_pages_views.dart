@@ -11,8 +11,8 @@ BoxDecoration imageDecoration() {
   return BoxDecoration(
     image: DecorationImage(
         image: AssetImage(
-          ImageUtility.cappucinoAsset,
+          ImageUtility.screenImageAsset,
         ),
-        fit: BoxFit.cover),
+        fit: BoxFit.fill),
   );
 }

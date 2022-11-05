@@ -14,7 +14,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  int seconds = 1;
+  int seconds = 120;
   @override
  void initState() {
     super.initState();
@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Stack(children: [
         imagePageViews(),
         mainTextViewin(AppColor.koromiko),
-        SizedBoxView(),
+       // SizedBoxView(),
         bottomTextViewon(AppColor.white),
       ]),
     );

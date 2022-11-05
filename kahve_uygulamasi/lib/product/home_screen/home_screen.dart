@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
       padding: EdgeInsets.zero,
       textAlign: TextAlign.center,
       textStyle: TextStyle(fontSize: 16),
-      width: 200,
+      width: 170,
       ontap: (() => selectionControl(kahve)));
   Coffee kahve = Coffee();
   CoffeeViewModelUtility coffee_utility = CoffeeViewModelUtility();
@@ -118,21 +118,18 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    /*SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Colors.black));*/
     return SafeArea(
       child: Scaffold(
+        
           body: Row(
         children: [
           Expanded(
             flex: 1,
             child: ColumnImage(
               child: ListView(
-                  clipBehavior: Clip.hardEdge,
                   physics: NeverScrollableScrollPhysics(),
                   children: List.generate(
-                    // growable: false,
-                    7,
+                    imageUi.length,
                     (index) => containerImage(index),
                   )),
             ),
@@ -144,10 +141,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   customText(),
+                  SizedBox(
+                    height: 5,
+                  ),
                   IngredientSelection(
                     kahve: kahve,
                   ),
+                  SizedBox(
+                    height: 5,
+                  ),
                   CustomButton(buttonBox: buttonBox),
+                  SizedBox(
+                    height: 5,
+                  ),
                   customTextBox(),
                 ],
               ),

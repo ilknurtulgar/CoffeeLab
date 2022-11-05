@@ -34,29 +34,26 @@ class CustomText extends StatefulWidget {
 class _CustomTextState extends State<CustomText> {
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: widget.onTap,
-      child: Container(
-        alignment: Alignment.center,
-        child: Column(
-          children: [
-            TextView(widget.text1, widget.textStyle),
-            TextView(widget.text2, widget.textStyle),
-          ],
+    return Container(
+      alignment: Alignment.center,
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: TextView(widget.text1, widget.textStyle),
         ),
-        width: widget.width,
-        height: widget.height,
-        decoration: BoxDecoration(
-            borderRadius: widget.borderRadius,
-            color: widget.color,
-            border: Border.all(color: widget.borderColor ?? AppColor.koromiko)),
       ),
+      width: widget.width,
+      height: widget.height,
+      decoration: BoxDecoration(
+          borderRadius: widget.borderRadius,
+          color: widget.color,
+          border: Border.all(color: widget.borderColor ?? AppColor.koromiko)),
     );
   }
 
-  Text TextView(String? text, TextStyle textStyle) {
+  Text TextView(String text, TextStyle textStyle) {
     return Text(
-      text ?? "",
+      text,
       textAlign: widget.textAlign,
       style: textStyle,
     );

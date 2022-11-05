@@ -1,23 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:kahve_uygulamasi/core/base/util/image_utility.dart';
 
 import '../../../core/base/util/base_utility.dart';
 
-Expanded containerImage(index) {
-  return Expanded(
-    child: Container(
-      padding: PaddingUtility.paddingImage,
-      height: 100,
-      width: 114.25,
-      child: Image.asset(
-        imageUi[1],
-      ),
+Container containerImage(index) {
+  return Container(
+    margin: EdgeInsets.only(bottom: 15),
+    padding: PaddingUtility.paddingImage,
+    height: 100,
+    width: 114.25,
+    child: Image.asset(
+      imageUi[index],
+      fit: BoxFit.cover,
     ),
   );
 }
 
 class ColumnImage extends StatelessWidget {
   const ColumnImage({Key? key, required this.child}) : super(key: key);
+
   final Widget child;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -32,8 +35,13 @@ class ColumnImage extends StatelessWidget {
 }
 
 List imageUi = [
-  "assets/images/latte.jpeg",
-  "assets/images/cappucino.jpeg",
-  "assets/images/espresso.jpeg",
-  "assets/images/conPanna.jpeg"
+  ImageUtility.cappucinoAsset,
+  ImageUtility.caramelMacchiatoAsset,
+  ImageUtility.espressoAsset,
+  ImageUtility.flatWhiteAsset,
+  ImageUtility.iceLatteAsset,
+  ImageUtility.latteAsset,
+  ImageUtility.macchiatoAsset,
+  ImageUtility.turkKahvesiAsset,
+  ImageUtility.iceAmericanoAsset,
 ];

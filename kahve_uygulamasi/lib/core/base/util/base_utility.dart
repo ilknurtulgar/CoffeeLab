@@ -47,7 +47,7 @@ class AlignUtility {
 }
 
 TextStyle barTextStyle() =>
-    TextStyle(fontSize: 20, fontWeight: FontWeight.w600);
+    TextStyle(fontSize: 15, fontWeight: FontWeight.w500);
 TextStyle topTextStyle() =>
     TextStyle(fontSize: 16, fontWeight: FontWeight.w600, fontFamily: "Poppins");
 
@@ -60,12 +60,12 @@ class AppRadius {
   static const BorderRadius borderRadius =
       BorderRadius.all(Radius.circular(12));
   static const BorderRadius bordertopRadius =
-      BorderRadius.all(Radius.circular(38));
+      BorderRadius.all(Radius.circular(13));
 }
 
 class MainPositioned {
   static double left = 64;
-  static double topx = 61;
+  static double topx =40;
   static double right = 60;
   static double top2x = 150;
 }
@@ -83,6 +83,6 @@ class TextStyleView {
 class CoffeeeAssistantPositioned {
   static double left = 57;
   static double right = 58;
-  static double bottomx = 90;
+  static double bottomx = 50;
   static double bottom2x = 180;
 }

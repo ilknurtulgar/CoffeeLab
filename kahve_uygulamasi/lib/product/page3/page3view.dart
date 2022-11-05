@@ -24,11 +24,9 @@ class Page3View extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SafeArea(
+    return SafeArea(
         child: Scaffold(
-          backgroundColor: AppColor.wildSand,
+          //backgroundColor: AppColor.wildSand,
           body: Padding(
             padding: AppMargin.columnMargin,
             child: Column(
@@ -61,7 +59,6 @@ class Page3View extends StatelessWidget {
             ),
           ),
         ),
-      ),
     );
   }
 }
