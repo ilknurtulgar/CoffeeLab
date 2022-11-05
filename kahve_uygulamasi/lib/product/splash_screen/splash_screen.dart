@@ -28,14 +28,13 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Stack(children: [
         imagePageViews(),
-        mainTextViewin(AppColor.koromiko),
-        bottomTextViewon(AppColor.white),
+        mainTextView(AppColor.koromiko),
+        bottomTextView(AppColor.white),
       ]),
     );
   }
 
-//kahve asistanı ve espresso bazlı kısmı renkleri tutmadı tekrar bak
-  PositionedText bottomTextViewon(Color color) {
+  PositionedText bottomTextView(Color color) {
     return PositionedText(
         textColor: AppColor.koromiko,
         maintext: SplashTextView.bottomtextx,
@@ -46,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
         bottom: CoffeeeAssistantPositioned.bottomx);
   }
 
-  PositionedText mainTextViewin(Color color) {
+  PositionedText mainTextView(Color color) {
     return PositionedText(
       textColor: AppColor.white,
       maintext: SplashTextView.maintextx,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../text/customtext/text_view.dart';
+import '../../model/custom_text_view.dart';
 
 class CustomButton extends StatefulWidget {
   const CustomButton({Key? key, required this.buttonBox}) : super(key: key);
@@ -19,7 +19,7 @@ class _CustomButtonState extends State<CustomButton> {
             width: widget.buttonBox.width,
             decoration: _boxDecoration(),
             child: Center(
-              child: Text(widget.buttonBox.text ?? "",
+              child: Text(widget.buttonBox.text,
                   style: widget.buttonBox.textStyle),
             )));
   }

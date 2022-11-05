@@ -11,12 +11,12 @@ class CustomText extends StatefulWidget {
     required this.borderRadius,
     required this.textAlign,
     required this.text1,
-    this.text2,
-    this.onTap,
+    // this.text2,
+    // this.onTap,
     this.borderColor,
   }) : super(key: key);
   final String text1;
-  final String? text2;
+  //final String? text2;
 
   final double height;
   final double width;
@@ -24,7 +24,7 @@ class CustomText extends StatefulWidget {
   final TextStyle textStyle;
   final BorderRadius borderRadius;
   final TextAlign textAlign;
-  final Function()? onTap;
+  //final Function()? onTap;
   final Color? borderColor;
 
   @override
@@ -39,20 +39,23 @@ class _CustomTextState extends State<CustomText> {
       child: Center(
         child: Padding(
           padding: const EdgeInsets.all(5.0),
-          child: TextView(widget.text1, widget.textStyle),
+          child: textView(widget.text1, widget.textStyle),
         ),
       ),
-
       width: widget.width,
       height: widget.height,
-      decoration: BoxDecoration(
-          borderRadius: widget.borderRadius,
-          color: widget.color,
-          border: Border.all(color: widget.borderColor ?? AppColor.koromiko)),
+      decoration: _boxDecoration(),
     );
   }
 
-  Text TextView(String text, TextStyle textStyle) {
+  BoxDecoration _boxDecoration() {
+    return BoxDecoration(
+        borderRadius: widget.borderRadius,
+        color: widget.color,
+        border: Border.all(color: widget.borderColor ?? AppColor.koromiko));
+  }
+
+  Text textView(String text, TextStyle textStyle) {
     return Text(
       text,
       textAlign: widget.textAlign,

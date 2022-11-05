@@ -1,9 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:kahve_uygulamasi/model/random_text.dart';
+import 'package:kahve_uygulamasi/model/coffee/coffeUI_data/random_text.dart';
 
-import '../../../components/text/customtext/custom_text.dart';
+import '../../../components/text/custom_text/custom_text.dart';
 import '../../../core/base/util/base_utility.dart';
 
 //yeni yazdığım textview.dartdakini kullan
@@ -17,7 +17,6 @@ CustomText customTextBox() {
       height: 110,
       text1: randomtext[Random().nextInt(6)],
       width: 180);
-
 }
 
 CustomText customText() {
@@ -29,6 +28,4 @@ CustomText customText() {
       height: 50,
       text1: "KAHVENDE NELER OLSUN?",
       width: 210);
-
-
 }

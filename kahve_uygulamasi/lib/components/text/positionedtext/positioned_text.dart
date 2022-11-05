@@ -38,11 +38,10 @@ class PositionedText extends StatelessWidget {
     );
   }
 
-//bu text customtext dekiyle çok benzer 1 tane olabilir.buna tekrar bak
   Text textMethod(String text, TextStyle textStyle, Color? textColor) {
     return Text(
       text,
-      textAlign: SplashTextView.textAlign,
+      textAlign: AlignUtility.textAlign,
       style: textStyle.copyWith(
         color: textColor,
       ),
@@ -55,6 +54,4 @@ class SplashTextView {
   static String maintextx = "bazlı ";
   static String bottomtext = "Kahve ";
   static String bottomtextx = "Asistanı ";
-
-  static TextAlign textAlign = TextAlign.center;
 }

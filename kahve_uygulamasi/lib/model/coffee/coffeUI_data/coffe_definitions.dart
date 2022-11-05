@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
-
 class CoffeDefinitions {
-  static String americano =
-      " Americano sıcak su ekleyerek tek shot espressoya kaynatmak yöntemi ile hazırlanan kahve çeşidi.";
+  static String conPanna =
+      " Tek chot espresso üzerine çırpılmış krema ile hazırlanan kahve çeşidi.";
   static String latte =
       "Tek shot espresso ve buharla ısıtılmış kıvamlı süt ile hazirlanan kahve çeşidi.";
+  static String iceLatte =
+      "Tek shot espresso bol miktarda süt ve buz ile hazirlanan kahve çeşidi.";
   static String mocha =
       'Tek shot espresso ,erimiş çikolata ve buharda ısıtılmış köpüklü süt ile hazırlanan kahve çeşidi.';
   static String cappucino =
@@ -20,7 +20,9 @@ class CoffeDefinitions {
   static String macchiato =
       'Tek veya iki shot espresso shot az miktarda buharda ısıtılmış süt ve süt köpüğü ile hazırlanan kahve çeşidi.';
   static String espresso =
-      'İnce çekilmiş kahve çekirdeklerinden yüksek basınçla sıcak suyun birleşmesi ile hazırlanan kahve çeşididir.';
+      'Kavrulmuş ve ince çekilmiş kahve tozunun içinden 90 derece sıcaklıkta suyun çok kısa bir sürede yüksek basınçla geçirilmesi ile hazırlanan kahve çeşidi.';
   static String iceAmericano =
       'Espresso soğuk su ve buz ile hazırlanan kahve çeşidi.';
+  static String turkKahvesi =
+      "Kendine has kahve aroması olan Türk kahvesi özel pişirme yöntemi ile köpük elde ederek hazırlanan kahve çeşidi.";
 }

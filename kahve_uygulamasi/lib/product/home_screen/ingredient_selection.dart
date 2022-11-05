@@ -1,9 +1,7 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:kahve_uygulamasi/components/vertical_text_row.dart';
-import 'package:kahve_uygulamasi/model/coffee/coffeUI_data/coffee_classes.dart';
-import 'package:kahve_uygulamasi/product/page3/page3view.dart';
-import 'buttons/custom_row_with_buttons.dart';
+import 'package:kahve_uygulamasi/product/home_screen/vertical_text_row.dart';
+import '../../components/buttons/custom_row_with_buttons.dart';
+import '../../model/coffee/coffee_view_model/coffee_models.dart';
 
 class IngredientSelection extends StatefulWidget {
   IngredientSelection({Key? key, required this.kahve}) : super(key: key);
@@ -13,16 +11,7 @@ class IngredientSelection extends StatefulWidget {
 }
 
 class _IngredientSelectionState extends State<IngredientSelection> {
-  CoffeeViewModelUtility coffee_utility = CoffeeViewModelUtility();
-  List<String> ingredientName = [
-    'süt',
-    'buz',
-    'şeker',
-    'krema',
-    'sütlü çikolata',
-    'beyaz çikolata',
-    'karamel'
-  ];
+  //CoffeeViewModelUtility coffeeUtility = CoffeeViewModelUtility();
   late List<bool?> ingredients = [
     widget.kahve.sut,
     widget.kahve.buz,
@@ -32,6 +21,7 @@ class _IngredientSelectionState extends State<IngredientSelection> {
     widget.kahve.beyazCikolata,
     widget.kahve.karamel
   ];
+
   late List<Function> callbackFunctions = [
     (bool upIngredient) {
       setState(() {
@@ -96,3 +86,13 @@ class _IngredientSelectionState extends State<IngredientSelection> {
     );
   }
 }
+
+List<String> ingredientName = [
+  'süt',
+  'buz',
+  'şeker',
+  'krema',
+  'sütlü çikolata',
+  'beyaz çikolata',
+  'karamel'
+];
