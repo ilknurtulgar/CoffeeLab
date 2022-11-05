@@ -37,7 +37,8 @@ class PaddingUtility {
   static EdgeInsets coffeNamePading = EdgeInsets.only(top: 10);
   static EdgeInsets listviewPadding = EdgeInsets.symmetric(horizontal: 20);
   static const EdgeInsets paddingOnly = EdgeInsets.only(left: 191, top: 70);
-  static const EdgeInsets paddingonlyTab = EdgeInsets.only(top: 350, left: 200);
+  static const EdgeInsets paddingonlyTab =
+      EdgeInsets.only(top: 350, left: 150, right: 150);
   static const EdgeInsets paddingImage = EdgeInsets.only(left: 19, right: 19);
 }
 
@@ -60,7 +61,7 @@ class AppRadius {
   static const BorderRadius borderRadius =
       BorderRadius.all(Radius.circular(12));
   static const BorderRadius bordertopRadius =
-      BorderRadius.all(Radius.circular(38));
+      BorderRadius.all(Radius.circular(30));
 }
 
 class MainPositioned {

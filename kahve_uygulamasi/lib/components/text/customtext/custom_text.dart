@@ -36,28 +36,20 @@ class CustomText extends StatefulWidget {
 class _CustomTextState extends State<CustomText> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: widget.padding,
-      child: InkWell(
-        onTap: widget.onTap,
-        child: Container(
-          alignment: Alignment.center,
-          child: Column(
-            
-            children: [
-              TextView(widget.text1, widget.textStyle),
-              TextView(widget.text2, widget.textStyle),
-            ],
-          ),
-          width: widget.width,
-          height: widget.height,
-          decoration: BoxDecoration(
-              borderRadius: widget.borderRadius,
-              color: widget.color,
-              border:
-                  Border.all(color: widget.borderColor ?? AppColor.koromiko)),
-        ),
+    return Container(
+      alignment: Alignment.center,
+      child: Column(
+        children: [
+          TextView(widget.text1, widget.textStyle),
+          TextView(widget.text2, widget.textStyle),
+        ],
       ),
+      width: widget.width,
+      height: widget.height,
+      decoration: BoxDecoration(
+          borderRadius: widget.borderRadius,
+          color: widget.color,
+          border: Border.all(color: widget.borderColor ?? AppColor.koromiko)),
     );
   }
 
