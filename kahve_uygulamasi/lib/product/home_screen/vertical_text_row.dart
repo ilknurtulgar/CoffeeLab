@@ -28,11 +28,11 @@ class VerticalTextRow extends StatelessWidget {
 
   Padding RotatedText(String title, EdgeInsets titlePadding) {
     return Padding(
-      padding: EdgeInsets.only(left: 10.0),
+      padding: titlePadding,
       child: RotatedBox(
           quarterTurns: 3,
           child: Text(
-            'içerik',
+            title,
             style: buttonTextStyle(),
           )),
     );
@@ -41,8 +41,8 @@ class VerticalTextRow extends StatelessWidget {
 
 class Titles {
   static String informationTitle = 'içerik';
-  static String trueCheckTitle = 'içerik';
-  static String falseCheckTitle = 'içerik';
+  static String trueCheckTitle = 'olsun';
+  static String falseCheckTitle = 'olmasın';
 }
 
 class IngredientChoosingUtility {

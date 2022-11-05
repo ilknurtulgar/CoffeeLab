@@ -65,7 +65,7 @@ class _IngredientSelectionState extends State<IngredientSelection> {
       children: [
         Container(
             height: 411,
-            width: 191,
+            width: 200,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 color: Color.fromARGB(255, 202, 143, 122)),
