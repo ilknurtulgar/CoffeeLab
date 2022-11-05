@@ -22,17 +22,17 @@ class _CustomRowWithButtonsState extends State<CustomRowWithButtons> {
   @override
   Widget build(BuildContext context) {
     return Row(
-     mainAxisAlignment: IngredientChoosingUtility.alignment,
-     children: [
-      Padding(
-        padding: IngredientChoosingUtility.informationTitlePadding,
-        child: Text(
-          widget.coffeeIngredientName,
-          style: buttonTextStyle(),
-        ),
-      ),
-      _toggleButtons(),
-    ]);
+        mainAxisAlignment: IngredientChoosingUtility.alignment,
+        children: [
+          Padding(
+            padding: IngredientChoosingUtility.informationTitlePadding,
+            child: Text(
+              widget.coffeeIngredientName,
+              style: buttonTextStyle(),
+            ),
+          ),
+          _toggleButtons(),
+        ]);
   }
 
   ToggleButtons _toggleButtons() {
@@ -54,8 +54,8 @@ class _CustomRowWithButtonsState extends State<CustomRowWithButtons> {
       isSelected: isSelected,
       color: AppColor.black,
       borderColor: AppColor.transparent,
-      selectedColor:AppColor.white,
-      selectedBorderColor:AppColor.transparent,
+      selectedColor: AppColor.white,
+      selectedBorderColor: AppColor.transparent,
       fillColor: AppColor.transparent,
       splashColor: AppColor.transparent,
       children: IconView,
@@ -69,5 +69,3 @@ class _CustomRowWithButtonsState extends State<CustomRowWithButtons> {
     ];
   }
 }
-
-
