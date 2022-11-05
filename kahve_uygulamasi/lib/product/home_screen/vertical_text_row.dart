@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:kahve_uygulamasi/components/custom_space.dart';
 import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
+
+import '../../core/base/util/ingredient_selection_utility.dart';
 
 class VerticalTextRow extends StatelessWidget {
   const VerticalTextRow({Key? key}) : super(key: key);
@@ -9,16 +12,14 @@ class VerticalTextRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: IngredientChoosingUtility.alignment,
       children: [
-        RotatedText(Titles.informationTitle,
+        rotatedText(Titles.informationTitle,
             IngredientChoosingUtility.informationTitlePadding),
         Row(
           children: [
-            RotatedText(Titles.trueCheckTitle,
+            rotatedText(Titles.trueCheckTitle,
                 IngredientChoosingUtility.trueCheckTitlePadding),
-            const SizedBox(
-              width: 33,
-            ),
-            RotatedText(Titles.falseCheckTitle,
+            CustomSpace(0, 33),
+            rotatedText(Titles.falseCheckTitle,
                 IngredientChoosingUtility.falseCheckTitlePadding),
           ],
         ),
@@ -26,7 +27,7 @@ class VerticalTextRow extends StatelessWidget {
     );
   }
 
-  Padding RotatedText(String title, EdgeInsets titlePadding) {
+  Padding rotatedText(String title, EdgeInsets titlePadding) {
     return Padding(
       padding: titlePadding,
       child: RotatedBox(
@@ -43,12 +44,4 @@ class Titles {
   static String informationTitle = 'içerik';
   static String trueCheckTitle = 'olsun';
   static String falseCheckTitle = 'olmasın';
-}
-
-class IngredientChoosingUtility {
-  static EdgeInsets informationTitlePadding = EdgeInsets.only(left: 10.0);
-  static EdgeInsets trueCheckTitlePadding = EdgeInsets.zero;
-  static EdgeInsets falseCheckTitlePadding = EdgeInsets.only(right: 19.0);
-  static MainAxisAlignment alignment = MainAxisAlignment.spaceBetween;
-  static Icon checkIcon = Icon(Icons.check_circle_outline);
 }

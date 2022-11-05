@@ -1,8 +1,11 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/components/buttons/custom_button.dart';
+import 'package:kahve_uygulamasi/components/custom_space.dart';
+import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
 import 'package:kahve_uygulamasi/product/home_screen/ingredient_selection.dart';
+import 'package:kahve_uygulamasi/product/home_screen/vertical_text_row.dart';
+import '../../core/base/util/ingredient_selection_utility.dart';
 import '../../model/coffee/coffeUI_data/coffee_uidata_model_utility.dart';
 import '../../model/coffee/coffee_view_model/coffee_models.dart';
 import '../../model/custom_text_view.dart';
@@ -19,25 +22,20 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   late ButtonBox buttonBox = ButtonBox(
-      borderRadius: BorderRadius.circular(15),
-      text: 'Kahveyi Yolla',
-      color: Colors.brown,
-      height: 50,
-      padding: EdgeInsets.zero,
-      textAlign: TextAlign.center,
-      textStyle: TextStyle(fontSize: 16),
-      width: 170,
+      borderRadius: IngredientChoosingUtility.borderRadius,
+      text: IngredientChoosingUtility.sendButtonText,
+      color: AppColor.brown,
+      height: IngredientChoosingUtility.sendButtonHeight,
+      width: IngredientChoosingUtility.sendButtonWidth,
+      padding: IngredientChoosingUtility.sendButtonPadding,
+      textAlign: IngredientChoosingUtility.sendButtonTextAlign,
+      textStyle: IngredientChoosingUtility.sendButtonTextStyle,
       ontap: (() => selectionControl(kahve)));
   Coffee kahve = Coffee();
   CoffeeViewModelUtility coffeeUtility = CoffeeViewModelUtility();
   void sendCoffee(CoffeeViewModel coffeeData) {
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => Page3View(coffeData: coffeeData),
-        ));
+    Navigator.push(context,MaterialPageRoute(builder: (context) => Page3View(coffeData: coffeeData),));
   }
-
   void determineCoffeeKind(Coffee kahve) {
     int randomNumber = 0;
     CoffeeViewModelUtility cuInFunction = CoffeeViewModelUtility();
@@ -108,18 +106,26 @@ class _HomeScreenState extends State<HomeScreen> {
     return showDialog(
       context: context,
       builder: ((context) => AlertDialog(
-            content: Text('Lütfen bütün malzemeler için seçim yapınız'),
-            backgroundColor: Color.fromARGB(255, 225, 157, 133),
-            actions: [
-              TextButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: Text(
-                    'Tamam',
-                    style: TextStyle(color: Colors.black),
-                  ))
-            ],
+            content: Text(
+              IngredientChoosingUtility.alertDialogWarningText,
+              style: buttonTextStyle(),
+            ),
+            contentPadding: IngredientChoosingUtility.alertDialogContentPadding,
+            backgroundColor:
+                IngredientChoosingUtility.alertDialogBackgroundColor,
+            actionsPadding: IngredientChoosingUtility.alertDialogActionPadding,
+            actions: [alertDialogTextButton(context)],
           )),
     );
+  }
+
+  TextButton alertDialogTextButton(BuildContext context) {
+    return TextButton(
+        onPressed: () => Navigator.pop(context),
+        child: Text(
+          'Tamam',
+          style: buttonTextStyle(),
+        ));
   }
 
   @override
@@ -176,19 +182,13 @@ class _ColumnCustomViewState extends State<ColumnCustomView> {
       mainAxisSize: Projectutility.mainAxisSize,
       children: [
         customText(),
-        SizedBox(
-          height: 5,
-        ),
+        CustomSpace(6, 0),
         IngredientSelection(
           kahve: widget.kahve,
         ),
-        SizedBox(
-          height: 5,
-        ),
+        CustomSpace(6, 0),
         CustomButton(buttonBox: widget.buttonBox),
-        SizedBox(
-          height: 5,
-        ),
+        CustomSpace(6, 0),
         customTextBox(),
       ],
     );
