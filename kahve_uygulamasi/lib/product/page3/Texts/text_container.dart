@@ -25,7 +25,7 @@ Container TextContainer(String coffeName, String coffeeInfo) {
               coffeeInfo,
               PaddingUtility.textPading,
               TextStyleView.fontSizeSuggestion,
-              AppComponentSizes.text_Width,
+              AppComponentSizes.coffeName_Width,
               AlignUtility.textAlign),
         ],
       ));

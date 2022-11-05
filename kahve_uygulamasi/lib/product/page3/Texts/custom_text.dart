@@ -14,7 +14,7 @@ Container CustomText(String text, EdgeInsets padding_, double fontSize,
           fontFamily: TextStyleView.fontFamilyPoppins,
           fontSize: fontSize,
           fontWeight: TextStyleView.fontWeightPage3,
-          color: AppColor.black), //temporary
+          color: AppColor.black),
     ),
   );
 }
