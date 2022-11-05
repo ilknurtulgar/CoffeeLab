@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kahve_uygulamasi/core/base/util/image_utility.dart';
 
 Container imagePageViews() {
   return Container(
@@ -10,7 +11,7 @@ BoxDecoration imageDecoration() {
   return BoxDecoration(
     image: DecorationImage(
         image: AssetImage(
-          "assets/flatwhite.jpg",
+          ImageUtility.cappucinoAsset,
         ),
         fit: BoxFit.cover),
   );

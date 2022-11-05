@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/components/buttons/custom_button.dart';
 import 'package:kahve_uygulamasi/components/ingredient_selection.dart';
 import 'package:kahve_uygulamasi/components/text/customtext/text_view.dart';
-import '../../model/coffee_classes.dart';
+import '../../model/coffee/coffeUI_data/coffee_classes.dart';
 import '../page3/page3view.dart';
 import 'column_image_box.dart/column_image_box.dart';
 import 'customTextBox/custom_text_box.dart';

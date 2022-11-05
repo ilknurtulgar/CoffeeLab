@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:kahve_uygulamasi/product/page3/Texts/custom_text.dart';
-
-import 'package:kahve_uygulamasi/model/coffee_classes.dart';
+import 'package:kahve_uygulamasi/model/coffee/coffeUI_data/coffee_classes.dart';
 
 import '../../core/base/util/base_utility.dart';
 
@@ -37,7 +35,8 @@ class Page3View extends StatelessWidget {
               children: [
                 Expanded(
                   flex: 6,
-                  child: TextContainer(tmptxt, tmpdef),
+                  child: TextContainer(onerileriyleKahve.coffeeName,
+                      onerileriyleKahve.coffeeInformation),
                 ),
                 Expanded(
                   flex: 14,
