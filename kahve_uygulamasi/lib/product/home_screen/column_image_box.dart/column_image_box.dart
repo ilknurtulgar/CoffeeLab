@@ -5,14 +5,18 @@ import '../../../core/base/util/base_utility.dart';
 
 Container containerImage(index) {
   return Container(
-    margin: EdgeInsets.only(bottom: 15),
-    padding: PaddingUtility.paddingImage,
-    height: 100,
-    width: 114.25,
-    child: Image.asset(
-      imageUi[index],
-      fit: BoxFit.cover,
-    ),
+    margin: AppMargin.containerImageMargin,
+    padding: ColumnSizeStyle.paddingImage,
+    height: ColumnSizeStyle.imageHeight,
+    width: ColumnSizeStyle.imageWidth,
+    child: imageAsset(index),
+  );
+}
+
+Image imageAsset(index) {
+  return Image.asset(
+    imageUi[index],
+    fit: BoxFit.cover,
   );
 }
 
@@ -24,11 +28,11 @@ class ColumnImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 28),
+      padding: ColumnSizeStyle.columnBoxPadding,
       child: Container(
-          width: 138,
+          width: ColumnSizeStyle.columnBoxWidth,
           height: MediaQuery.of(context).size.height,
-          color: Colors.black,
+          color: ColumnSizeStyle.columnBoxColor,
           child: child),
     );
   }
@@ -45,3 +49,13 @@ List imageUi = [
   ImageUtility.turkKahvesiAsset,
   ImageUtility.iceAmericanoAsset,
 ];
+
+class ColumnSizeStyle {
+  static double imageHeight = 100;
+
+  static double imageWidth = 114.25;
+  static double columnBoxWidth = 138;
+  static EdgeInsets columnBoxPadding = EdgeInsets.only(left: 28);
+  static const EdgeInsets paddingImage = EdgeInsets.only(left: 19, right: 19);
+  static Color columnBoxColor = AppColor.black;
+}

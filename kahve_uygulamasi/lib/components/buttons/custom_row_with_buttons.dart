@@ -26,13 +26,17 @@ class _CustomRowWithButtonsState extends State<CustomRowWithButtons> {
         children: [
           Padding(
             padding: IngredientChoosingUtility.informationTitlePadding,
-            child: Text(
-              widget.coffeeIngredientName,
-              style: buttonTextStyle(),
-            ),
+            child: _textVariable(),
           ),
           _toggleButtons(),
         ]);
+  }
+
+  Text _textVariable() {
+    return Text(
+      widget.coffeeIngredientName,
+      style: buttonTextStyle(),
+    );
   }
 
   ToggleButtons _toggleButtons() {
@@ -58,11 +62,11 @@ class _CustomRowWithButtonsState extends State<CustomRowWithButtons> {
       selectedBorderColor: AppColor.transparent,
       fillColor: AppColor.transparent,
       splashColor: AppColor.transparent,
-      children: IconView,
+      children: iconView,
     );
   }
 
-  List<Widget> get IconView {
+  List<Widget> get iconView {
     return <Widget>[
       IngredientChoosingUtility.checkIcon,
       IngredientChoosingUtility.checkIcon,

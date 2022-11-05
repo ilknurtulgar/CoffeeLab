@@ -32,7 +32,7 @@ class Page3View extends StatelessWidget {
             children: [
               Expanded(
                 flex: 6,
-                child: TextContainer(coffeData.coffee.coffeeName,
+                child: textContainer(coffeData.coffee.coffeeName,
                     coffeData.coffee.coffeeInformation),
               ),
               Expanded(

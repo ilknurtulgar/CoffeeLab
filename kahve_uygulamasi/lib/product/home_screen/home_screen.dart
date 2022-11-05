@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/components/buttons/custom_button.dart';
+import 'package:kahve_uygulamasi/components/text/custom_text/custom_text.dart';
 import 'package:kahve_uygulamasi/product/home_screen/ingredient_selection.dart';
 import '../../model/coffee/coffeUI_data/coffee_uidata_model_utility.dart';
 import '../../model/coffee/coffee_view_model/coffee_models.dart';
@@ -135,7 +136,10 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             flex: 2,
             child: Center(
-              child: ColumnCustomView(kahve: kahve, buttonBox: buttonBox),
+              child: ColumnCustomView(
+                kahve: kahve,
+                buttonBox: buttonBox,
+              ),
             ),
           )
         ],
@@ -175,7 +179,7 @@ class _ColumnCustomViewState extends State<ColumnCustomView> {
     return Column(
       mainAxisSize: Projectutility.mainAxisSize,
       children: [
-        customText(),
+        CustomTextBoxs(customTextModel: customTextModelBox),
         SizedBox(
           height: 5,
         ),
@@ -189,7 +193,7 @@ class _ColumnCustomViewState extends State<ColumnCustomView> {
         SizedBox(
           height: 5,
         ),
-        customTextBox(),
+        CustomTextBoxs(customTextModel: customTextModelRandom),
       ],
     );
   }

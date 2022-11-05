@@ -31,6 +31,7 @@ class AppMargin {
     right: 10,
     top: 3,
   );
+  static EdgeInsets containerImageMargin = EdgeInsets.only(bottom: 15);
 }
 
 class PaddingUtility {
@@ -40,7 +41,6 @@ class PaddingUtility {
   static const EdgeInsets paddingOnly = EdgeInsets.only(left: 191, top: 70);
   static const EdgeInsets paddingonlyTab =
       EdgeInsets.only(top: 350, left: 150, right: 150);
-  static const EdgeInsets paddingImage = EdgeInsets.only(left: 19, right: 19);
 }
 
 class AlignUtility {

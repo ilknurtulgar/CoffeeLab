@@ -5,18 +5,18 @@ class CustomTextModel {
   final double height;
   final double width;
   final Color color;
-  final EdgeInsets padding;
+  final EdgeInsets? padding;
   final TextStyle textStyle;
   final BorderRadius borderRadius;
-  final TextAlign textAlign;
+  final TextAlign? textAlign;
   CustomTextModel(
       {required this.height,
       required this.width,
       required this.color,
-      required this.padding,
+      this.padding,
       required this.textStyle,
       required this.borderRadius,
-      required this.textAlign,
+      this.textAlign,
       required this.text});
 }
 

@@ -9,16 +9,16 @@ class VerticalTextRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: IngredientChoosingUtility.alignment,
       children: [
-        RotatedText(Titles.informationTitle,
+        rotatedText(Titles.informationTitle,
             IngredientChoosingUtility.informationTitlePadding),
         Row(
           children: [
-            RotatedText(Titles.trueCheckTitle,
+            rotatedText(Titles.trueCheckTitle,
                 IngredientChoosingUtility.trueCheckTitlePadding),
             const SizedBox(
               width: 33,
             ),
-            RotatedText(Titles.falseCheckTitle,
+            rotatedText(Titles.falseCheckTitle,
                 IngredientChoosingUtility.falseCheckTitlePadding),
           ],
         ),
@@ -26,7 +26,7 @@ class VerticalTextRow extends StatelessWidget {
     );
   }
 
-  Padding RotatedText(String title, EdgeInsets titlePadding) {
+  Padding rotatedText(String title, EdgeInsets titlePadding) {
     return Padding(
       padding: titlePadding,
       child: RotatedBox(

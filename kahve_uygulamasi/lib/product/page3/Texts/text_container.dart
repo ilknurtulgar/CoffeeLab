@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/base/util/base_utility.dart';
-import '../../../model/coffee/coffeUI_data/coffe_definitions.dart';
 import 'custom_text.dart';
 
-Container TextContainer(String coffeName, String coffeeInfo) {
+Container textContainer(String coffeName, String coffeeInfo) {
   return Container(
       width: AppComponentSizes.big_Width,
       margin: AppMargin.containersMargin,
