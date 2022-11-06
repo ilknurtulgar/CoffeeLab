@@ -80,7 +80,7 @@ class _IngredientSelectionState extends State<IngredientSelection> {
 
   ListView ingredientRows() {
     return ListView.builder(
-      itemCount: 7,
+      itemCount: ingredientName.length,
       itemBuilder: (context, index) => CustomRowWithButtons(
           coffeeIngredient: ingredients[index],
           coffeeIngredientName: ingredientName[index],
