@@ -41,7 +41,7 @@ class VerticalTextRow extends StatelessWidget {
 }
 
 class Titles {
-  static String informationTitle = 'içerik';
-  static String trueCheckTitle = 'olsun';
-  static String falseCheckTitle = 'olmasın';
+  static String informationTitle = 'İçerik';
+  static String trueCheckTitle = 'Olsun';
+  static String falseCheckTitle = 'Olmasın';
 }
