@@ -37,18 +37,22 @@ class _IngredientSelectionState extends State<IngredientSelection> {
                mainAxisSize: IngredientChoosingUtility.selectionContainerMainAxisSize,
                children: [
                 VerticalTextRow(),
-                ListView.builder(
-                  itemCount: 7,
-                  itemBuilder: (context, index) => CustomRowWithButtons(
-                      coffeeIngredient: ingredients[index],
-                      coffeeIngredientName: ingredientName[index],
-                      callbackFunction: callbackFunctions[index]),
-                  shrinkWrap: true,
-                )
+                ingredientRows()
               ]),
             )),
       ],
     );
+  }
+
+  ListView ingredientRows() {
+    return ListView.builder(
+                itemCount: 7,
+                itemBuilder: (context, index) => CustomRowWithButtons(
+                    coffeeIngredient: ingredients[index],
+                    coffeeIngredientName: ingredientName[index],
+                    callbackFunction: callbackFunctions[index]),
+                shrinkWrap: true,
+              );
   }
 }
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/base/util/base_utility.dart';
 
-Widget CustomImage(
+Widget customImage(
   String imagePath,
   EdgeInsets margin_,
   double width_,

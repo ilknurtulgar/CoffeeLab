@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-
 import '../../core/base/util/base_utility.dart';
-
 import '../../model/coffee/coffee_view_model/coffee_models.dart';
-import 'Texts/text_container.dart';
-import 'custom_image.dart';
-import 'suggestion.dart';
+import 'text/text_container.dart';
+import '../../components/image/custom_image.dart';
+import 'card/suggestion.dart';
 
 class ResultPageScreen extends StatelessWidget {
   const ResultPageScreen({super.key, required this.coffeData});
@@ -15,7 +13,6 @@ class ResultPageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        //backgroundColor: AppColor.wildSand,
         body: Padding(
           padding: AppMargin.columnMargin,
           child: Column(
@@ -27,25 +24,29 @@ class ResultPageScreen extends StatelessWidget {
               ),
               Expanded(
                 flex: 14,
-                child: CustomImage(coffeData.coffee.coffeeImagAsset,
-                    AppMargin.containersMargin, AppComponentSizes.big_Width),
+                child: customImage(coffeData.coffee.coffeeImagAsset,
+                    AppMargin.containersMargin, AppComponentSizes.bigWidth),
               ),
               Expanded(
                 flex: 7,
-                child: Container(
-                  padding: PaddingUtility.listviewPadding,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) => //degiistirilecek
-                        Suggestion(coffeData.suggestions[index].coffeeImagAsset,
-                            coffeData.suggestions[index].coffeeName),
-                    itemCount: coffeData.suggestions.length,
-                  ),
-                ),
+                child: suggestions(),
               )
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Padding suggestions() {
+    return Padding(
+      padding: PaddingUtility.listviewPadding,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) => suggestion(
+            coffeData.suggestions[index].coffeeImagAsset,
+            coffeData.suggestions[index].coffeeName),
+        itemCount: coffeData.suggestions.length,
       ),
     );
   }
