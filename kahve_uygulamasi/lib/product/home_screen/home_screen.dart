@@ -187,7 +187,10 @@ class _ColumnCustomViewState extends State<ColumnCustomView> {
     return Column(
       mainAxisSize: Projectutility.mainAxisSize,
       children: [
-        CustomTextBoxs(customTextModel: customTextModelBox),
+        CustomTextBoxs(
+          customTextModel: customTextModelBox,
+          borderColor: AppColor.apricotPeach,
+        ),
         customSpace(6, 0),
         IngredientSelection(
           kahve: widget.kahve,
@@ -195,7 +198,9 @@ class _ColumnCustomViewState extends State<ColumnCustomView> {
         customSpace(6, 0),
         CustomButton(buttonBox: widget.buttonBox),
         customSpace(6, 0),
-        CustomTextBoxs(customTextModel: customTextModelRandom),
+        CustomTextBoxs(
+            customTextModel: customTextModelRandom,
+            borderColor: AppColor.apricotPeach),
       ],
     );
   }

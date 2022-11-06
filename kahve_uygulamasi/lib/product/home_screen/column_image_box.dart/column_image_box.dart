@@ -55,7 +55,7 @@ class ColumnSizeStyle {
 
   static double imageWidth = 114.25;
   static double columnBoxWidth = 138;
-  static EdgeInsets columnBoxPadding = EdgeInsets.only(left: 28);
+  static const EdgeInsets columnBoxPadding = EdgeInsets.only(left: 28);
   static const EdgeInsets paddingImage = EdgeInsets.only(left: 19, right: 19);
   static Color columnBoxColor = AppColor.black;
 }

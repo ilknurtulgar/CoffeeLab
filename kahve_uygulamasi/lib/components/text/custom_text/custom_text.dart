@@ -3,9 +3,11 @@ import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
 import 'package:kahve_uygulamasi/model/text_model/custom_text_view.dart';
 
 class CustomTextBoxs extends StatefulWidget {
-  const CustomTextBoxs({Key? key, required this.customTextModel})
+  const CustomTextBoxs(
+      {Key? key, required this.customTextModel, required this.borderColor})
       : super(key: key);
   final CustomTextModel customTextModel;
+  final Color borderColor;
   @override
   State<CustomTextBoxs> createState() => _CustomTextBoxsState();
 }
@@ -18,7 +20,7 @@ class _CustomTextBoxsState extends State<CustomTextBoxs> {
       child: _textView(),
       width: widget.customTextModel.width,
       height: widget.customTextModel.height,
-      decoration: _boxDecoration(),
+      decoration: _boxDecoration(widget.borderColor),
     );
   }
 
@@ -32,10 +34,11 @@ class _CustomTextBoxsState extends State<CustomTextBoxs> {
     );
   }
 
-  BoxDecoration _boxDecoration() {
+  BoxDecoration _boxDecoration(Color borderColor) {
     return BoxDecoration(
       borderRadius: widget.customTextModel.borderRadius,
       color: widget.customTextModel.color,
+      border: Border.all(color: borderColor, width: 3),
     );
   }
 

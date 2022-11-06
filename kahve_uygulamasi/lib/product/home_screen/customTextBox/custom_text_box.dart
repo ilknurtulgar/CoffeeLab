@@ -17,7 +17,7 @@ CustomTextModel customTextModelBox = CustomTextModel(
 CustomTextModel customTextModelRandom = CustomTextModel(
     height: TextUtilitiy.heightRandomBox,
     width: TextUtilitiy.widthRandomBox,
-    color: AppColor.apricotPeach,
+    color: AppColor.white,
     textStyle: barTextStyle(),
     borderRadius: AppRadius.bordertopRadius,
     text: randomtext[Random().nextInt(6)]);
