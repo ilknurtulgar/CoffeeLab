@@ -14,7 +14,7 @@ class IngredientChoosingUtility {
   static String alertDialogWarningText =
       'Lütfen bütün malzemeler için seçim yapınız';
 
-  static Color sendButtonColor = AppColor.brown;
+  static Color sendButtonColor = AppColor.apricotPeach;
   static String sendButtonText = "Kahveyi Yolla";
   static BorderRadius borderRadius = BorderRadius.circular(15);
   static double sendButtonHeight = 50;
@@ -22,10 +22,8 @@ class IngredientChoosingUtility {
   static EdgeInsets sendButtonPadding = EdgeInsets.zero;
   static TextAlign sendButtonTextAlign = TextAlign.center;
   static const TextStyle sendButtonTextStyle = TextStyle(fontSize: 16);
-  static const Color selectionBackgroundColor =
-      Color.fromARGB(255, 202, 143, 122);
-  static const Color alertDialogBackgroundColor =
-      Color.fromARGB(255, 225, 157, 133);
+  static const Color selectionBackgroundColor = AppColor.tacao;
+  static const Color alertDialogBackgroundColor = AppColor.wildSand;
   static double selectionContainerWidth = 200;
   static double selectionContainerHeight = 411;
   static MainAxisSize selectionContainerMainAxisSize = MainAxisSize.min;
