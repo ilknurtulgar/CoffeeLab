@@ -33,7 +33,7 @@ Container firstTextInformation(String coffeName) {
   return customInformationText(
       coffeName,
       PaddingUtility.coffeNamePading,
-      TextStyleView.fontSizePage3,
+      TextStyleView.fontSizefirst,
       AppComponentSizes.bigWidth,
       AlignUtility.textAlign,
       TextStyleView.fontWeight);

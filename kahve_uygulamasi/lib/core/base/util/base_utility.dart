@@ -81,7 +81,7 @@ class AlignUtility {
 class TextStyleView {
   static const String fontFamily = "Amiri";
   static const String fontFamilyPoppins = "Poppins";
-  static double fontSizePage3 = 25;
+  static double fontSizefirst = 25;
   static double fontSizeSuggestion = 16;
   static double fontSize = 50;
   static FontWeight fontWeight = FontWeight.w700;
