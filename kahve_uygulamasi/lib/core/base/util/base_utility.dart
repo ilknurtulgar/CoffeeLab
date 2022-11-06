@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppColor {
-  static const Color koromiko = Color(0xFFFFB067);
+  static const Color koromiko = Color(0xFFFEBB5B);
   static const Color white = Color(0xFFFFFFFF);
   static const Color black = Color(0xFF000000);
   static const Color wildSand = Color(0xFFF5F5F5);
