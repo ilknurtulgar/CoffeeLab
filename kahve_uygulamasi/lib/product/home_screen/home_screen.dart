@@ -198,7 +198,7 @@ class _ColumnCustomViewState extends State<ColumnCustomView> {
         CustomSpace(6, 0),
         CustomButton(buttonBox: widget.buttonBox),
         CustomSpace(6, 0),
-        CustomTextBoxs(customTextModel: customTextModelBox),
+        CustomTextBoxs(customTextModel: customTextModelRandom),
       ],
     );
   }
