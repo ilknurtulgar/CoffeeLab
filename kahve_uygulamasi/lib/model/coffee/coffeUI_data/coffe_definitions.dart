@@ -16,7 +16,7 @@ class CoffeDefinitions {
   static String whiteChocolateMocha =
       'Tek shot espresso ,erimiş beyaz çikolata ve buharda ısıtılmış köpüklü süt ile hazırlanan kahve çeşidi.';
   static String frappe =
-      'Espresso ,süt ,krema ve buzla hazırlanan soüuk kahve çeşidi. ';
+      'Espresso ,süt ,krema ve buzla hazırlanan soğuk kahve çeşidi. ';
   static String macchiato =
       'Tek veya iki shot espresso shot az miktarda buharda ısıtılmış süt ve süt köpüğü ile hazırlanan kahve çeşidi.';
   static String espresso =

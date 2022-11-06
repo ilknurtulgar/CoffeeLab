@@ -57,11 +57,11 @@ class _IngredientSelectionState extends State<IngredientSelection> {
 }
 
 List<String> ingredientName = [
-  'süt',
-  'buz',
-  'şeker',
-  'krema',
-  'sütlü çikolata',
-  'beyaz çikolata',
-  'karamel'
+  'Süt',
+  'Buz',
+  'Şeker',
+  'Krema',
+  'Sütlü çikolata',
+  'Beyaz çikolata',
+  'Karamel'
 ];

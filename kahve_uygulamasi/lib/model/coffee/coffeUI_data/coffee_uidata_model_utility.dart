@@ -6,16 +6,15 @@ import 'coffee_uidata_information.dart';
 class CoffeeViewModelUtility extends CoffeeInformationModelUtility {
   late CoffeeViewModel caramelMacchiatoVM = CoffeeViewModel(
     coffee: caramelMacchiatoIM,
-    suggestions: [mochaIM, latteIM, iceAmericanoIM],
+    suggestions: [conpannaIM,whiteChocolateMochaIM,frappeIM,mochaIM],
   );
   late CoffeeViewModel frappeVM = CoffeeViewModel(
       coffee: frappeIM,
       suggestions: [
-        iceLatteIM,
+        caramelMacchiatoIM,
         mochaIM,
         whiteChocolateMochaIM,
-        frappeIM,
-        caramelMacchiatoIM
+        iceAmericanoIM,
       ]);
   late CoffeeViewModel cappucinoVM = CoffeeViewModel(
     coffee: cappucinoIM,
@@ -23,19 +22,19 @@ class CoffeeViewModelUtility extends CoffeeInformationModelUtility {
   );
   late CoffeeViewModel flatWhiteVM = CoffeeViewModel(
     coffee: flatWhiteIM,
-    suggestions: [cappucinoIM, macchiatoIM, espressoIM],
+    suggestions: [cappucinoIM, macchiatoIM,latteIM],
   );
   late CoffeeViewModel turkKahvesiVM = CoffeeViewModel(
     coffee: turkKahvesiIM,
-    suggestions: [iceAmericanoIM, espressoIM],
+    suggestions: [espressoIM,iceAmericanoIM],
   );
   late CoffeeViewModel iceLatteVM = CoffeeViewModel(
     coffee: iceLatteIM,
-    suggestions: [mochaIM, whiteChocolateMochaIM, caramelMacchiatoIM],
+    suggestions: [frappeIM,iceAmericanoIM,latteIM],
   );
   late CoffeeViewModel latteVM = CoffeeViewModel(
     coffee: latteIM,
-    suggestions: [mochaIM, whiteChocolateMochaIM, caramelMacchiatoIM],
+    suggestions: [macchiatoIM,flatWhiteIM,cappucinoIM],
   );
   late CoffeeViewModel mochaVM = CoffeeViewModel(
     coffee: mochaIM,
@@ -47,7 +46,7 @@ class CoffeeViewModelUtility extends CoffeeInformationModelUtility {
   );
   late CoffeeViewModel iceAmericanoVM = CoffeeViewModel(
     coffee: iceAmericanoIM,
-    suggestions: [espressoIM, frappeIM, iceLatteIM],
+    suggestions: [espressoIM,turkKahvesiIM,iceLatteIM],
   );
   late CoffeeViewModel macchiatoVM = CoffeeViewModel(
     coffee: macchiatoIM,
@@ -55,7 +54,7 @@ class CoffeeViewModelUtility extends CoffeeInformationModelUtility {
   );
   late CoffeeViewModel espressoVM = CoffeeViewModel(
     coffee: espressoIM,
-    suggestions: [iceAmericanoIM, cappucinoIM, macchiatoIM, flatWhiteIM],
+    suggestions: [turkKahvesiIM,iceAmericanoIM,],
   );
   late CoffeeViewModel whiteChocolateMochaVM = CoffeeViewModel(
     coffee: whiteChocolateMochaIM,
