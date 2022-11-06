@@ -20,7 +20,7 @@ class CoffeDefinitions {
   static String macchiato =
       'Tek veya iki shot espresso shot az miktarda buharda ısıtılmış süt ve süt köpüğü ile hazırlanan kahve çeşidi.';
   static String espresso =
-      'Kavrulmuş ve ince çekilmiş kahve tozunun içinden 90 derece sıcaklıkta suyun çok kısa bir sürede yüksek basınçla geçirilmesi ile hazırlanan kahve çeşidi.';
+      'İnce çekilmiş kahve tozunun içinden sıcak suyun kısa bir sürede yüksek basınçla geçirilmesi ile hazırlanan kahve çeşidi.';
   static String iceAmericano =
       'Espresso soğuk su ve buz ile hazırlanan kahve çeşidi.';
   static String turkKahvesi =
