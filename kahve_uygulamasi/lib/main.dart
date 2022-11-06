@@ -4,11 +4,11 @@ import 'package:kahve_uygulamasi/product/splash_screen/splash_screen.dart';
 
 //import 'package:kahve_uygulamasi/model/coffee_classes.dart';
 void main() {
-  runApp(KahveUygulamasi());
+  runApp(CoffeeLab());
 }
 
-class KahveUygulamasi extends StatelessWidget {
-  KahveUygulamasi({Key? key}) : super(key: key);
+class CoffeeLab extends StatelessWidget {
+  CoffeeLab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

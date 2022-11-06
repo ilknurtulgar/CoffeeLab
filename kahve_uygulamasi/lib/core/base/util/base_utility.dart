@@ -85,7 +85,7 @@ class TextStyleView {
   static double fontSizeSuggestion = 16;
   static double fontSize = 50;
   static FontWeight fontWeight = FontWeight.w700;
-  static FontWeight fontWeightPage3 = FontWeight.w500;
+  static FontWeight fontWeightSecond = FontWeight.w500;
 }
 
 TextStyle barTextStyle() =>

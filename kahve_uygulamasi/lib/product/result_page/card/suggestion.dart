@@ -25,7 +25,7 @@ Container suggestionName(String coffeName) {
       TextStyleView.fontSizeSuggestion,
       AppComponentSizes.scrollWidth,
       AlignUtility.start,
-      TextStyleView.fontWeightPage3);
+      TextStyleView.fontWeightSecond);
 }
 
 Card suggestionCardImage(String imagePath) {

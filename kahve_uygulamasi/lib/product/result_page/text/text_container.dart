@@ -26,7 +26,7 @@ Container secondTextInformation(String coffeeInfo) {
       TextStyleView.fontSizeSuggestion,
       AppComponentSizes.coffeNameWidth,
       AlignUtility.textAlign,
-      TextStyleView.fontWeightPage3);
+      TextStyleView.fontWeightSecond);
 }
 
 Container firstTextInformation(String coffeName) {
