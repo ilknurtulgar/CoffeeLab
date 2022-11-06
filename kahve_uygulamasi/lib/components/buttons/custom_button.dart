@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../model/text_model/custom_text_view.dart';
+import '../../model/text_model/custom_text_model.dart';
 
 class CustomButton extends StatefulWidget {
   const CustomButton({Key? key, required this.buttonBox}) : super(key: key);

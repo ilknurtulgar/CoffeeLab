@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../components/text/positionedtext/positioned_text.dart';
+import '../../components/text/custom_text/positionedtext/positioned_text.dart';
 import '../../core/base/util/base_utility.dart';
 import '../home_screen/home_screen.dart';
 import 'splash_image/image_pages_views.dart';
@@ -13,7 +13,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  int seconds = 2;
+  int seconds = 5;
   @override
   void initState() {
     super.initState();
@@ -57,9 +57,6 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 
-  TextStyle textStyleViewPage(color) => TextStyle(
-      fontFamily: TextStyleView.fontFamily,
-      fontSize: TextStyleView.fontSize,
-      fontWeight: TextStyleView.fontWeight,
-      color: color);
+//
+
 }

@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:kahve_uygulamasi/model/coffee/coffeUI_data/random_text.dart';
-import 'package:kahve_uygulamasi/model/text_model/custom_text_view.dart';
+import 'package:kahve_uygulamasi/model/text_model/custom_text_model.dart';
 import '../../../core/base/util/base_utility.dart';
 
 final String _textBox = "KAHVENDE NELER OLSUN?";

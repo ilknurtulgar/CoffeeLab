@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
-import 'package:kahve_uygulamasi/model/text_model/custom_text_view.dart';
+import 'package:kahve_uygulamasi/model/text_model/custom_text_model.dart';
 
 class CustomTextBoxs extends StatefulWidget {
   const CustomTextBoxs(

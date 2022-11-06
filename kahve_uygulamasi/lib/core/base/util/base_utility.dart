@@ -100,3 +100,16 @@ TextStyle buttonTextStyle() => const TextStyle(
     fontWeight: FontWeight.w600,
     fontFamily: TextStyleView.fontFamilyPoppins,
     color: AppColor.black);
+
+SizedBox customSpace(double? vertical, double? horizontal) {
+  return SizedBox(
+    height: vertical,
+    width: horizontal,
+  );
+}
+
+TextStyle textStyleViewPage(color) => TextStyle(
+    fontFamily: TextStyleView.fontFamily,
+    fontSize: TextStyleView.fontSize,
+    fontWeight: TextStyleView.fontWeight,
+    color: color);
