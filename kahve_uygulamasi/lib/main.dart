@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
 import 'package:kahve_uygulamasi/product/splash_screen/splash_screen.dart';
 
-//import 'package:kahve_uygulamasi/model/coffee_classes.dart';
 void main() {
   runApp(CoffeeLab());
 }
