@@ -14,7 +14,8 @@ Widget customImage(
       borderRadius: AppRadius.componentRadius,
       child: Image(
         image: AssetImage(imagePath),
-        fit: BoxFit.fill,
+        //fit: BoxFit.fill,
+        fit: BoxFit.cover,
       ),
     ),
   );
