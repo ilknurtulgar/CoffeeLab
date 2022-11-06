@@ -92,15 +92,12 @@ class _HomeScreenState extends State<HomeScreen> {
       kahve.beyazCikolata,
       kahve.karamel
     ];
-
-    int nullMalzemeSayisi = 0;
     int i = 0;
-    for (i = 0; i < ingredientsInFunctionCoffee.length; i++) {
-      if (ingredientsInFunctionCoffee[i] == null) {
-        nullMalzemeSayisi++;
-      }
+    while (i < ingredientsInFunctionCoffee.length &&
+        ingredientsInFunctionCoffee[i] != null) {
+      i++;
     }
-    if (nullMalzemeSayisi == 0) {
+    if (i == ingredientsInFunctionCoffee.length) {
       determineCoffeeKind(kahve);
     } else {
       _showDialog();
