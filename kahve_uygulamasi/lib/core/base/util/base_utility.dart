@@ -48,6 +48,7 @@ class PaddingUtility {
   static const EdgeInsets paddingOnly = EdgeInsets.only(left: 191, top: 70);
   static const EdgeInsets paddingonlyTab =
       EdgeInsets.only(top: 350, left: 150, right: 150);
+  static const EdgeInsets boxPadding = EdgeInsets.all(5.0);
 }
 
 class MainPositioned {

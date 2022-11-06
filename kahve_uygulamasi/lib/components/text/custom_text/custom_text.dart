@@ -15,16 +15,20 @@ class _CustomTextBoxsState extends State<CustomTextBoxs> {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: textView(
-              widget.customTextModel.text, widget.customTextModel.textStyle),
-        ),
-      ),
+      child: _textView(),
       width: widget.customTextModel.width,
       height: widget.customTextModel.height,
       decoration: _boxDecoration(),
+    );
+  }
+
+  Center _textView() {
+    return Center(
+      child: Padding(
+        padding: PaddingUtility.boxPadding,
+        child: textView(
+            widget.customTextModel.text, widget.customTextModel.textStyle),
+      ),
     );
   }
 
