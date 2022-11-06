@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../core/base/util/base_utility.dart';
-import '../../../components/text/custom_information_text.dart';
+import '../../../components/text/custom_text/custom_information_text.dart';
 import '../../../components/image/custom_image.dart';
 
 Widget suggestion(String imagePath, String coffeName) {

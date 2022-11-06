@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/base/util/base_utility.dart';
+import '../../../../core/base/util/base_utility.dart';
 
 Container customInformationText(String text, EdgeInsets padding_,
     double fontSize, double width, TextAlign align, FontWeight fontWeight) {

@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/components/buttons/custom_button.dart';
-import 'package:kahve_uygulamasi/product/home_screen/ingredient_selection.dart';
+import 'package:kahve_uygulamasi/product/home_screen/button_selection_box/ingredient_selection.dart';
 import '../../components/sized_box/custom_space.dart';
 import '../../components/text/custom_text/custom_text.dart';
 import '../../core/base/util/base_utility.dart';

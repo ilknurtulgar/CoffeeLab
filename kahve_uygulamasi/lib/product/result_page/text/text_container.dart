@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../core/base/util/base_utility.dart';
-import '../../../components/text/custom_information_text.dart';
+import '../../../components/text/custom_text/custom_information_text.dart';
 
 Container textContainer(String coffeName, String coffeeInfo) {
   return Container(

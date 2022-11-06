@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
 
-import '../../components/sized_box/custom_space.dart';
-import '../../core/base/util/ingredient_selection_utility.dart';
+import '../../../components/sized_box/custom_space.dart';
+import '../../../core/base/util/ingredient_selection_utility.dart';
 
 class VerticalTextRow extends StatelessWidget {
   const VerticalTextRow({Key? key}) : super(key: key);

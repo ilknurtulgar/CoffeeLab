@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../components/text/positionedtext/positioned_text.dart';
 import '../../core/base/util/base_utility.dart';
 import '../home_screen/home_screen.dart';
-import 'image_pages_views.dart';
+import 'splash_image/image_pages_views.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
