@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kahve_uygulamasi/components/custom_space.dart';
 import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
 
+import '../../components/sized_box/custom_space.dart';
 import '../../core/base/util/ingredient_selection_utility.dart';
 
 class VerticalTextRow extends StatelessWidget {
@@ -18,7 +18,7 @@ class VerticalTextRow extends StatelessWidget {
           children: [
             rotatedText(Titles.trueCheckTitle,
                 IngredientChoosingUtility.trueCheckTitlePadding),
-            CustomSpace(0, 33),
+            customSpace(0, 33),
             rotatedText(Titles.falseCheckTitle,
                 IngredientChoosingUtility.falseCheckTitlePadding),
           ],

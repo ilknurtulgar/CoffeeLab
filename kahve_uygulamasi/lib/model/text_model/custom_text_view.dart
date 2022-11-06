@@ -21,7 +21,7 @@ class CustomTextModel {
 }
 
 class CustomTextBox extends CustomTextModel {
-  final String text2;
+  final String maintext;
   CustomTextBox({
     required super.color,
     required super.text,
@@ -31,7 +31,7 @@ class CustomTextBox extends CustomTextModel {
     required super.textAlign,
     required super.textStyle,
     required super.width,
-    required this.text2,
+    required this.maintext,
   });
 }
 

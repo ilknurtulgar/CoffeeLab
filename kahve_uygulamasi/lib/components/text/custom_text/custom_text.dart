@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/core/base/util/base_utility.dart';
-import 'package:kahve_uygulamasi/model/custom_text_view.dart';
+import 'package:kahve_uygulamasi/model/text_model/custom_text_view.dart';
 
 class CustomTextBoxs extends StatefulWidget {
   const CustomTextBoxs({Key? key, required this.customTextModel})
@@ -32,8 +32,6 @@ class _CustomTextBoxsState extends State<CustomTextBoxs> {
     return BoxDecoration(
       borderRadius: widget.customTextModel.borderRadius,
       color: widget.customTextModel.color,
-      /* border: Border.all(
-            color: widget.customTextModel.borderColor ?? AppColor.koromiko));*/
     );
   }
 

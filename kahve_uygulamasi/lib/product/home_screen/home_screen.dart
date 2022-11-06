@@ -2,13 +2,13 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:kahve_uygulamasi/components/buttons/custom_button.dart';
 import 'package:kahve_uygulamasi/product/home_screen/ingredient_selection.dart';
-import '../../components/custom_space.dart';
+import '../../components/sized_box/custom_space.dart';
 import '../../components/text/custom_text/custom_text.dart';
 import '../../core/base/util/base_utility.dart';
 import '../../core/base/util/ingredient_selection_utility.dart';
 import '../../model/coffee/coffeUI_data/coffee_uidata_model_utility.dart';
 import '../../model/coffee/coffee_view_model/coffee_models.dart';
-import '../../model/custom_text_view.dart';
+import '../../model/text_model/custom_text_view.dart';
 import '../result_page/result_page.dart';
 import 'column_image_box.dart/column_image_box.dart';
 import 'customTextBox/custom_text_box.dart';
@@ -188,13 +188,13 @@ class _ColumnCustomViewState extends State<ColumnCustomView> {
       mainAxisSize: Projectutility.mainAxisSize,
       children: [
         CustomTextBoxs(customTextModel: customTextModelBox),
-        CustomSpace(6, 0),
+        customSpace(6, 0),
         IngredientSelection(
           kahve: widget.kahve,
         ),
-        CustomSpace(6, 0),
+        customSpace(6, 0),
         CustomButton(buttonBox: widget.buttonBox),
-        CustomSpace(6, 0),
+        customSpace(6, 0),
         CustomTextBoxs(customTextModel: customTextModelRandom),
       ],
     );
